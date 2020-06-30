@@ -1,4 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Montserrat, sant-serif;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.button {
+  border-radius: 5px;
+  height: 45px;
+}
+
+.section-padding {
+  padding: 60px 30px;
+}
+
 .fas.watermark-icon {
   display: none;
+}
+
+.right-column {
+  display: none;
+}
+
+nav ul {
+  display: none;
+}
+
+#hero-section .left-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: #416FD6;
+  color: white;
+  width: 100%;
+}
+
+#hero-section .left-column p {
+  margin-top: 30px;
+}
+
+#hero-section .left-column img {
+  height: 300px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#hero-section .left-column a {
+  margin-top: 30px;
+  color: #416FD6;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+}
+
+#hero-section .left-column a i {
+  margin-right: 5px;
 }
 /*# sourceMappingURL=style.css.map */
