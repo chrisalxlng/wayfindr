@@ -51,6 +51,27 @@ nav ul {
     display: none;
 }
 
+.section-header {
+    position: relative;
+    height: 100px;
+
+    .section-heading {
+        position: absolute;
+        bottom: 13px;
+        left: 30px;
+    }
+
+    .section-watermark-heading {
+        position: absolute;
+        bottom: 0;
+        left: 2px;
+        font-size: 70px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: rgba($color: #416FD6, $alpha: 0.05);
+    }
+}
+
 #hero-section {
     .left-column {
         display: flex;
