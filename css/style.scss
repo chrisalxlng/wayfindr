@@ -39,6 +39,11 @@ p {
     padding: 60px 30px;
 }
 
+.section-padding-y {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
 .fas.watermark-icon {
     display: none;
 }
@@ -57,7 +62,7 @@ nav ul {
 
     .section-heading {
         position: absolute;
-        bottom: 13px;
+        bottom: 10px;
         left: 30px;
     }
 
@@ -65,7 +70,7 @@ nav ul {
         position: absolute;
         bottom: 0;
         left: 2px;
-        font-size: 70px;
+        font-size: 60px;
         font-weight: 600;
         letter-spacing: 2px;
         color: rgba($color: #416FD6, $alpha: 0.05);
@@ -103,6 +108,59 @@ nav ul {
             
             i {
                 margin-right: 5px;
+            }
+        }
+    }
+}
+
+#features-section {
+    .features-grid {
+
+        .features-grid-element {
+            margin-bottom: 30px;
+            
+            .features-svg-container {
+                position: relative;
+
+                &.float-right {
+                    float: right;
+                    top: 50px;
+                    margin-right: 10px;
+                }
+
+                &.float-left {
+                    top: 30px;
+                    margin-left: 10px;
+                }
+
+                img {
+                    max-height: 140px;
+                    max-width: 200px;
+                }
+            }
+
+            .features-text-container {   
+                background-color: rgba($color: #C6C6FF, $alpha: 0.5);
+                padding: 30px;
+                width: calc(100vw - 30px);
+
+                &.float-right {
+                    float: right;
+                    border-radius: 10px 0 0 10px;
+                }
+
+                &.float-left {
+                    border-radius: 0 10px 10px 0;
+                }
+
+                h3 {
+                    width: 80%;
+                }
+
+                p {
+                    margin-top: 10px;
+                    text-align: justify;
+                }
             }
         }
     }
