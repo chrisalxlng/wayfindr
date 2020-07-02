@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 $main-color: #416FD6;
+$secondary-color: #C6C6FF;
 $main-font: Montserrat, sant-serif;
 
 * {
@@ -12,6 +13,7 @@ $main-font: Montserrat, sant-serif;
 
 ul {
     list-style: none;
+    padding-inline-start: 0px;
 }
 
 a {
@@ -44,6 +46,10 @@ p {
     padding-bottom: 60px;
 }
 
+.line-through {
+    text-decoration: line-through;
+}
+
 .fas.watermark-icon {
     display: none;
 }
@@ -73,7 +79,7 @@ nav ul {
         font-size: 60px;
         font-weight: 600;
         letter-spacing: 2px;
-        color: rgba($color: #416FD6, $alpha: 0.05);
+        color: rgba($color: $main-color, $alpha: 0.05);
     }
 }
 
@@ -131,6 +137,7 @@ nav ul {
                 &.float-left {
                     top: 30px;
                     margin-left: 10px;
+                    margin-top: 10px;
                 }
 
                 img {
@@ -140,7 +147,7 @@ nav ul {
             }
 
             .features-text-container {   
-                background-color: rgba($color: #C6C6FF, $alpha: 0.5);
+                background-color: rgba($color: $secondary-color, $alpha: 0.5);
                 padding: 30px;
                 width: calc(100vw - 30px);
 
@@ -160,6 +167,88 @@ nav ul {
                 p {
                     margin-top: 10px;
                     text-align: justify;
+                }
+            }
+        }
+    }
+}
+
+#pricing-section {
+
+    .pricing-cards-container {
+        display: flex;
+        overflow: auto;
+
+        &::after {
+            content: "";
+            flex: 0 0 1px;
+        }
+
+        .pricing-card {
+            border: 3px rgba($color: $secondary-color, $alpha: 0.5) solid;
+            border-radius: 10px;
+            background-color: rgba($color: $secondary-color, $alpha: 0.5);
+            min-width: 70%;
+            margin-right: 30px;
+
+            &.spotlight {
+                border: 3px $main-color solid;
+                background-color: $main-color;
+                transform: scale(1.03);
+            }
+
+            .pricing-card-heading {
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 700;
+                
+                p {
+                    font-size: 18px;
+                }
+
+                &.spotlight {
+                    color: white;
+                }
+            }
+
+            .pricing-card-content {
+                padding: 20px;
+                background-color: white;
+
+                .pricing-card-price {
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 15px;
+                    margin-top: 5px;
+                }
+
+                .pricing-card-benefit-list {
+                    margin-top: 20px;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 5px;
+
+                        i {
+                            width: 20px;
+                            padding-right: 30px;
+
+                            &.fa-check {
+                                color: #38B238;
+                            }
+
+                            &.fa-times {
+                                color: #D32E2E;
+                            }
+                        }
+
+                        p {
+                            font-size: 13px;
+                        }
+                    }
                 }
             }
         }

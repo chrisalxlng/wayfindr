@@ -9,6 +9,8 @@
 
 ul {
   list-style: none;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
 }
 
 a {
@@ -39,6 +41,10 @@ p {
 .section-padding-y {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.line-through {
+  text-decoration: line-through;
 }
 
 .fas.watermark-icon {
@@ -138,6 +144,7 @@ nav ul {
 #features-section .features-grid .features-grid-element .features-svg-container.float-left {
   top: 30px;
   margin-left: 10px;
+  margin-top: 10px;
 }
 
 #features-section .features-grid .features-grid-element .features-svg-container img {
@@ -167,5 +174,99 @@ nav ul {
 #features-section .features-grid .features-grid-element .features-text-container p {
   margin-top: 10px;
   text-align: justify;
+}
+
+#pricing-section .pricing-cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+}
+
+#pricing-section .pricing-cards-container::after {
+  content: "";
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1px;
+          flex: 0 0 1px;
+}
+
+#pricing-section .pricing-cards-container .pricing-card {
+  border: 3px rgba(198, 198, 255, 0.5) solid;
+  border-radius: 10px;
+  background-color: rgba(198, 198, 255, 0.5);
+  min-width: 70%;
+  margin-right: 30px;
+}
+
+#pricing-section .pricing-cards-container .pricing-card.spotlight {
+  border: 3px #416FD6 solid;
+  background-color: #416FD6;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+#pricing-section .pricing-cards-container .pricing-card .pricing-card-heading {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+}
+
+#pricing-section .pricing-cards-container .pricing-card .pricing-card-heading p {
+  font-size: 18px;
+}
+
+#pricing-section .pricing-cards-container .pricing-card .pricing-card-heading.spotlight {
+  color: white;
+}
+
+#pricing-section .pricing-cards-container .pricing-card .pricing-card-content {
+  padding: 20px;
+  background-color: white;
+}
+
+#pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-price {
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+#pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-benefit-list {
+  margin-top: 20px;
+}
+
+#pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-benefit-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5px;
+}
+
+#pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-benefit-list li i {
+  width: 20px;
+  padding-right: 30px;
+}
+
+#pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-benefit-list li i.fa-check {
+  color: #38B238;
+}
+
+#pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-benefit-list li i.fa-times {
+  color: #D32E2E;
+}
+
+#pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-benefit-list li p {
+  font-size: 13px;
 }
 /*# sourceMappingURL=style.css.map */
