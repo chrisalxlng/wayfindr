@@ -61,6 +61,11 @@ p {
   padding-bottom: 60px;
 }
 
+.section-padding-x {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .line-through {
   text-decoration: line-through;
 }
@@ -70,10 +75,6 @@ p {
 }
 
 .right-column {
-  display: none;
-}
-
-nav ul {
   display: none;
 }
 
@@ -98,6 +99,56 @@ nav ul {
   color: rgba(65, 111, 214, 0.05);
 }
 
+nav ul {
+  display: none;
+}
+
+nav {
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 0;
+  color: white;
+  height: 50px;
+  background-color: #416FD6;
+}
+
+nav .cta-hamburger-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .cta-hamburger-container a {
+  border: 1px white solid;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 10px;
+  color: white;
+}
+
+nav .cta-hamburger-container a i {
+  padding-right: 5px;
+  margin-left: 0;
+  font-size: 8px;
+}
+
+nav .cta-hamburger-container i {
+  margin-left: 30px;
+}
+
 #hero-section .left-column {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,6 +164,7 @@ nav ul {
   background-color: #416FD6;
   color: white;
   width: 100%;
+  margin-top: 40px;
 }
 
 #hero-section .left-column p {
