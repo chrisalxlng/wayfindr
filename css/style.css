@@ -7,6 +7,10 @@
   overflow-x: hidden;
 }
 
+*:focus {
+  outline: none;
+}
+
 ul {
   list-style: none;
   -webkit-padding-start: 0px;
@@ -32,6 +36,20 @@ p {
 .button {
   border-radius: 5px;
   height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+}
+
+.button i {
+  margin-right: 10px;
 }
 
 .section-padding {
@@ -111,20 +129,6 @@ nav ul {
   margin-top: 30px;
   color: #416FD6;
   background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-weight: 500;
-}
-
-#hero-section .left-column a i {
-  margin-right: 5px;
 }
 
 #features-section .features-grid .features-grid-element {
@@ -250,7 +254,7 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 #pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-benefit-list li i {
@@ -268,5 +272,73 @@ nav ul {
 
 #pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-benefit-list li p {
   font-size: 13px;
+}
+
+#signup-section {
+  width: 100%;
+}
+
+#signup-section .signup-section-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+#signup-section .signup-section-content p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#signup-section .signup-section-content p span {
+  color: #416FD6;
+}
+
+#signup-section .signup-section-content form {
+  margin-top: 30px;
+  width: 100%;
+}
+
+#signup-section .signup-section-content form label {
+  float: left;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+#signup-section .signup-section-content form .input-submit-container {
+  width: 100%;
+}
+
+#signup-section .signup-section-content form .input-submit-container input {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px #C6C6FF solid;
+  border-radius: 5px;
+  height: 35px;
+  padding: 10px;
+}
+
+#signup-section .signup-section-content form .input-submit-container input:focus {
+  border: 2px #416FD6 solid;
+}
+
+#signup-section .signup-section-content form .input-submit-container button {
+  width: 100%;
+  border: none;
+  color: white;
+  background-color: #416FD6;
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -11,6 +11,10 @@ $main-font: Montserrat, sant-serif;
     overflow-x: hidden;
 }
 
+*:focus {
+    outline: none;
+}
+
 ul {
     list-style: none;
     padding-inline-start: 0px;
@@ -35,6 +39,14 @@ p {
 .button {
     border-radius: 5px;
     height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+
+    i {
+        margin-right: 10px;
+    }
 }
 
 .section-padding {
@@ -107,14 +119,6 @@ nav ul {
             margin-top: 30px;
             color: $main-color;
             background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: 500;
-            
-            i {
-                margin-right: 5px;
-            }
         }
     }
 }
@@ -230,7 +234,7 @@ nav ul {
                     li {
                         display: flex;
                         align-items: center;
-                        margin-bottom: 5px;
+                        margin-bottom: 15px;
 
                         i {
                             width: 20px;
@@ -249,6 +253,65 @@ nav ul {
                             font-size: 13px;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+#signup-section {
+    width: 100%;
+
+    .signup-section-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+
+            span {
+                color: $main-color;
+            }
+        }
+
+        form {
+            margin-top: 30px;
+            width: 100%;
+
+            label {
+                float: left;
+                font-size: 13px;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+
+            .input-submit-container {
+                width: 100%;
+
+                input {
+                    width: 100%;
+                    margin-bottom: 20px;
+                    border: 1px $secondary-color solid;
+                    border-radius: 5px;
+                    height: 35px;
+                    padding: 10px;
+
+                    &:focus {
+                        border: 2px $main-color solid;
+                    }
+                }
+
+                button {
+                    width: 100%;
+                    border: none;
+                    color: white;
+                    background-color: $main-color;
+                    font-size: 16px;
                 }
             }
         }
