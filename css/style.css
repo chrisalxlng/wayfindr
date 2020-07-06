@@ -57,8 +57,8 @@ p {
 }
 
 .section-padding-y {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .section-padding-x {
@@ -80,7 +80,7 @@ p {
 
 .section-header {
   position: relative;
-  height: 100px;
+  height: 60px;
 }
 
 .section-header .section-heading {
@@ -183,17 +183,13 @@ nav .cta-hamburger-container i {
   background-color: white;
 }
 
-#features-section .features-grid .features-grid-element {
-  margin-bottom: 30px;
-}
-
 #features-section .features-grid .features-grid-element .features-svg-container {
   position: relative;
 }
 
 #features-section .features-grid .features-grid-element .features-svg-container.float-right {
   float: right;
-  top: 50px;
+  top: 40px;
   margin-right: 10px;
 }
 
@@ -204,6 +200,7 @@ nav .cta-hamburger-container i {
 }
 
 #features-section .features-grid .features-grid-element .features-svg-container img {
+  padding-top: 0px;
   max-height: 140px;
   max-width: 200px;
 }
@@ -237,6 +234,9 @@ nav .cta-hamburger-container i {
   display: -ms-flexbox;
   display: flex;
   overflow: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 30px;
 }
 
 #pricing-section .pricing-cards-container::after {
@@ -252,6 +252,8 @@ nav .cta-hamburger-container i {
   background-color: rgba(198, 198, 255, 0.5);
   min-width: 70%;
   margin-right: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #pricing-section .pricing-cards-container .pricing-card.spotlight {
@@ -346,6 +348,8 @@ nav .cta-hamburger-container i {
           align-items: center;
   text-align: center;
   width: 100%;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 #signup-section .signup-section-content p {
@@ -358,7 +362,7 @@ nav .cta-hamburger-container i {
 }
 
 #signup-section .signup-section-content form {
-  margin-top: 30px;
+  margin-top: 50px;
   width: 100%;
 }
 
@@ -473,6 +477,11 @@ footer .lower-section .links-copyright-container .lower-footer-links {
 
 footer .lower-section .links-copyright-container .lower-footer-links a {
   color: white;
+}
+
+footer .lower-section .links-copyright-container .lower-footer-links span {
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 footer .lower-section .links-copyright-container .copyright {
