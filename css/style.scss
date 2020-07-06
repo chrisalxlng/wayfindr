@@ -112,6 +112,15 @@ nav {
     height: 50px;
     background-color: $main-color;
 
+    .logo {
+        display: flex;
+        align-items: center;
+
+        i {
+            margin-right: 5px;
+        }
+    }
+
     .cta-hamburger-container {
         display: flex;
         align-items: center;
