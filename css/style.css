@@ -393,4 +393,104 @@ nav .cta-hamburger-container i {
   background-color: #416FD6;
   font-size: 16px;
 }
+
+footer {
+  background-color: #416FD6;
+}
+
+footer .upper-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+footer .upper-section .footer-section-heading {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+footer .upper-section .footer-list-container li {
+  margin-top: 3px;
+}
+
+footer .upper-section .footer-list-container li a {
+  color: white;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+footer .upper-section .social-media-section ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(50px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  grid-row-gap: 10px;
+  margin-top: 10px;
+}
+
+footer .upper-section .social-media-section .fab {
+  color: #16284B;
+  font-size: 30px;
+}
+
+footer .upper-section .link-section {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+footer .lower-section {
+  background-color: #365FBA;
+  color: white;
+  font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+footer .lower-section .links-copyright-container {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+footer .lower-section .links-copyright-container .lower-footer-links {
+  margin-bottom: 10px;
+}
+
+footer .lower-section .links-copyright-container .lower-footer-links a {
+  color: white;
+}
+
+footer .lower-section .links-copyright-container .copyright {
+  font-size: 10px;
+}
+
+footer .lower-section .button {
+  border: 1px white solid;
+  width: 150px;
+  height: 35px;
+}
+
+footer .lower-section .button img {
+  width: 8%;
+  margin-right: 10px;
+}
+
+footer .lower-section .button p {
+  font-size: 10px;
+}
 /*# sourceMappingURL=style.css.map */
