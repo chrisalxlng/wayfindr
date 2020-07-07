@@ -99,14 +99,13 @@ p {
   color: rgba(65, 111, 214, 0.05);
 }
 
-nav ul {
-  display: none;
-}
-
 nav {
   position: fixed;
   width: 100vw;
   z-index: 100;
+}
+
+nav .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,13 +115,12 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0px 0;
   color: white;
   height: 50px;
   background-color: #416FD6;
 }
 
-nav .logo {
+nav .navbar .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,11 +129,11 @@ nav .logo {
           align-items: center;
 }
 
-nav .logo i {
+nav .navbar .logo i {
   margin-right: 5px;
 }
 
-nav .cta-hamburger-container {
+nav .navbar .cta-hamburger-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,7 +142,7 @@ nav .cta-hamburger-container {
           align-items: center;
 }
 
-nav .cta-hamburger-container a {
+nav .navbar .cta-hamburger-container a {
   border: 1px white solid;
   border-radius: 5px;
   padding: 5px 10px;
@@ -152,14 +150,46 @@ nav .cta-hamburger-container a {
   color: white;
 }
 
-nav .cta-hamburger-container a i {
+nav .navbar .cta-hamburger-container a i {
   padding-right: 5px;
   margin-left: 0;
   font-size: 8px;
 }
 
-nav .cta-hamburger-container i {
+nav .navbar .cta-hamburger-container i {
   margin-left: 30px;
+}
+
+nav .nav-ul {
+  display: none;
+  background-color: #416FD6;
+  border-bottom: 1px #365FBA solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+nav .nav-ul li {
+  padding: 10px 0;
+}
+
+nav .nav-ul li .nav-link {
+  display: block;
+  color: white;
+  width: 100%;
+  border: 1px white solid;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+nav .nav-ul li .nav-link i {
+  margin-right: 8px;
+}
+
+nav .nav-ul li .nav-link.main-cta {
+  background-color: white;
+  color: #416FD6;
 }
 
 #hero-section .left-column {

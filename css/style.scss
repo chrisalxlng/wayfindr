@@ -96,51 +96,83 @@ p {
     }
 }
 
-nav ul {
-    display: none;
-}
-
 nav {
     position: fixed;
     width: 100vw;
     z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 0;
-    color: white;
-    height: 50px;
-    background-color: $main-color;
 
-    .logo {
+    .navbar {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-
-        i {
-            margin-right: 5px;
+        color: white;
+        height: 50px;
+        background-color: $main-color;
+    
+        .logo {
+            display: flex;
+            align-items: center;
+    
+            i {
+                margin-right: 5px;
+            }
+        }
+    
+        .cta-hamburger-container {
+            display: flex;
+            align-items: center;
+    
+            a {
+                border: 1px white solid;
+                border-radius: 5px;
+                padding: 5px 10px;
+                font-size: 10px;
+                color: white;
+    
+                i {
+                    padding-right: 5px;
+                    margin-left: 0;
+                    font-size: 8px;
+                }
+            }
+    
+            i {
+                margin-left: 30px;
+            }
         }
     }
 
-    .cta-hamburger-container {
-        display: flex;
-        align-items: center;
+    .nav-ul {
+        display: none;
+        background-color: $main-color;
+        border-bottom: 1px #365FBA solid;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
 
-        a {
-            border: 1px white solid;
-            border-radius: 5px;
-            padding: 5px 10px;
-            font-size: 10px;
-            color: white;
+        li {
+            padding: 10px 0;
+            
 
-            i {
-                padding-right: 5px;
-                margin-left: 0;
-                font-size: 8px;
+            .nav-link {
+                display: block;
+                color: white;
+                width: 100%;
+                border: 1px white solid;
+                border-radius: 5px;
+                padding: 10px;
+                text-align: center;
+                font-weight: 500;
+
+                i {
+                    margin-right: 8px;
+                }
+
+                &.main-cta {
+                    background-color: white;
+                    color: $main-color;
+                }
             }
-        }
-
-        i {
-            margin-left: 30px;
         }
     }
 }
