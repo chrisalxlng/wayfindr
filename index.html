@@ -10,22 +10,22 @@
     
     <nav>
         <div class="navbar section-padding-x">
-            <div class="logo">
+            <a class="logo" href="index.html">
                 <i class="fas fa-map-signs"></i>
                 <span>Wayfindr</span>
-            </div>
+            </a>
     
             <div class="cta-hamburger-container">
-                <a href="#"><i class="fas fa-pen"></i>Sign up</a>
+                <a id="nav-signup-btn"><i class="fas fa-pen"></i>Sign up</a>
                 <i id="nav-toggle" class="fas fa-bars"></i>
             </div>
         </div>
 
         <ul id="nav-dropdown" class="nav-ul section-padding-x">
-            <li><a class="nav-link" href="#">Home</a></li>
-            <li><a class="nav-link" href="#">Features</a></li>
-            <li><a class="nav-link" href="#">Pricing</a></li>
-            <li><a class="nav-link main-cta" href="#"><i class="fas fa-pen"></i>Sign up</a></li>
+            <li><a id="home-btn" class="nav-link" href="#">Home</a></li>
+            <li><a id="features-btn" class="nav-link" href="#">Features</a></li>
+            <li><a id="pricing-btn" class="nav-link" href="#">Pricing</a></li>
+            <li><a id="signup-btn" class="nav-link main-cta" href="#"><i class="fas fa-pen"></i>Sign up</a></li>
         </ul>
     </nav>
 
@@ -34,7 +34,7 @@
             <h1>You will never need to rely on maps again.</h1>
             <p>Our new application will change the way you navigate. Sign up for free!</p>
             <img src="svg/hero.svg" alt="svg">
-            <a href="#" class="button"><i class="fas fa-book-open"></i>Learn more</a>
+            <a id="learnmore-btn" class="button"><i class="fas fa-book-open"></i>Learn more</a>
 
             <i class="fas fa-compass watermark-icon"></i>
             <i class="fas fa-location-arrow watermark-icon"></i>
@@ -270,6 +270,7 @@
     </footer>
 
     <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
     <script src="https://kit.fontawesome.com/6a2f31ed4f.js" crossorigin="anonymous"></script>
 
 </body>

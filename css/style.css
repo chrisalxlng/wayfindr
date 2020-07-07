@@ -46,6 +46,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .button i {
@@ -127,6 +128,8 @@ nav .navbar .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: white;
+  cursor: pointer;
 }
 
 nav .navbar .logo i {
@@ -148,6 +151,7 @@ nav .navbar .cta-hamburger-container a {
   padding: 5px 10px;
   font-size: 10px;
   color: white;
+  cursor: pointer;
 }
 
 nav .navbar .cta-hamburger-container a i {
@@ -158,6 +162,7 @@ nav .navbar .cta-hamburger-container a i {
 
 nav .navbar .cta-hamburger-container i {
   margin-left: 30px;
+  cursor: pointer;
 }
 
 nav .nav-ul {
