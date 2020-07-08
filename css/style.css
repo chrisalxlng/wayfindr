@@ -289,20 +289,33 @@ nav .nav-ul li .nav-link.main-cta {
   padding-top: 8px;
   padding-bottom: 8px;
   margin-top: 30px;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+#pricing-section .pricing-cards-container::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+#pricing-section .pricing-cards-container::before {
+  content: "";
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20vw;
+          flex: 0 0 20vw;
 }
 
 #pricing-section .pricing-cards-container::after {
   content: "";
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 1px;
-          flex: 0 0 1px;
+      -ms-flex: 0 0 calc(20vw - 30px);
+          flex: 0 0 calc(20vw - 30px);
 }
 
 #pricing-section .pricing-cards-container .pricing-card {
   border: 3px rgba(198, 198, 255, 0.5) solid;
   border-radius: 10px;
   background-color: rgba(198, 198, 255, 0.5);
-  min-width: 70%;
+  min-width: 60vw;
   margin-right: 30px;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -378,6 +391,24 @@ nav .nav-ul li .nav-link.main-cta {
 
 #pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-benefit-list li p {
   font-size: 13px;
+}
+
+#pricing-section .dot-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#pricing-section .dot-container .dot {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 2px #416FD6 solid;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+#pricing-section .dot-container .active {
+  background-color: #416FD6;
 }
 
 #signup-section {

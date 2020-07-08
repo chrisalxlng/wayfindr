@@ -274,17 +274,28 @@ nav {
         padding-top: 8px;
         padding-bottom: 8px;
         margin-top: 30px;
+        overflow: -moz-scrollbars-none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar { 
+            width: 0 !important 
+        }
+
+        &::before {
+            content: "";
+            flex: 0 0 20vw;
+        }
 
         &::after {
             content: "";
-            flex: 0 0 1px;
+            flex: 0 0 calc(20vw - 30px);
         }
 
         .pricing-card {
             border: 3px rgba($color: $secondary-color, $alpha: 0.5) solid;
             border-radius: 10px;
             background-color: rgba($color: $secondary-color, $alpha: 0.5);
-            min-width: 70%;
+            min-width: 60vw;
             margin-right: 30px;
             margin-top: 15px;
             margin-bottom: 15px;
@@ -349,6 +360,24 @@ nav {
                     }
                 }
             }
+        }
+    }
+
+    .dot-container {
+        text-align: center;
+        margin-top: 20px;
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            border: 2px $main-color solid;
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .active {
+            background-color: $main-color;
         }
     }
 }

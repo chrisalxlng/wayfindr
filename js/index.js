@@ -22,8 +22,12 @@ addEventListernersToButtons("#learnmore-btn", "#features-section", false);
 
 window.onload = function() {
     animateHeroSection();
+    scrollPricingContainerToCenter();    
 };
 
+document.querySelector(".pricing-cards-container").onscroll = function() {
+    checkForPricingContainerScrollPosition();
+}
 
 //------------HELPER FUNCTIONS------------
 function toggleDropdownNav() {
@@ -80,6 +84,48 @@ window.onscroll = function() {
         waiting = false;
     }, 100);
 };
+
+function scrollPricingContainerToCenter() {
+    var pricingCard = document.querySelector("#pricing-card-2");
+
+    var pricingContainer = document.querySelector(".pricing-cards-container");
+
+    var leftBorderPricingCard = pricingCard.getBoundingClientRect().left;
+
+    var rightBorderPricingCard = pricingCard.getBoundingClientRect().right;
+
+    var widthPricingCard = rightBorderPricingCard - leftBorderPricingCard;
+
+    var gapCardViewport = (window.innerWidth - widthPricingCard) / 2;
+
+    var centerScrollPos = leftBorderPricingCard - gapCardViewport;
+
+    pricingContainer.scrollTo(centerScrollPos, 0);
+}
+
+function checkForPricingContainerScrollPosition() {
+    var pricingCard1 = document.querySelector("#pricing-card-1").getBoundingClientRect();
+
+    var pricingCard2 = document.querySelector("#pricing-card-2").getBoundingClientRect();
+
+    var pricingCard3 = document.querySelector("#pricing-card-3").getBoundingClientRect();
+
+    if (pricingCard1.left >= 0 && pricingCard1.right <= window.innerWidth) {
+        styleActiveDot(1);
+    }
+    else if (pricingCard2.left >= 0 && pricingCard2.right <= window.innerWidth) {
+        styleActiveDot(2);
+    }
+    else if (pricingCard3.left >= 0 && pricingCard3.right <= window.innerWidth) {
+        styleActiveDot(3);
+    }
+}
+
+function styleActiveDot(number) {
+    var element = document.querySelector("#dot-" + number);
+    document.querySelector(".active").classList.remove("active");
+    element.classList.add("active");
+}
 
 
 
