@@ -170,7 +170,7 @@ function animateHeroSection() {
         targets: "#hero-left-column h1",
         translateY: [80, 0],
         opacity: [0, 1],
-        duration: 800
+        duration: 500
     })
     .add({
         targets: "#hero-left-column p",
@@ -181,5 +181,5 @@ function animateHeroSection() {
         targets: ["#hero-left-column img", "#hero-left-column a"],
         translateY: [20, 0],
         opacity: [0, 1],
-    })
+    }, "-=200")
 }
