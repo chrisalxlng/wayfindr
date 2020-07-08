@@ -20,13 +20,15 @@ addEventListernersToButtons("#signup-btn", "#signup-section", true);
 addEventListernersToButtons("#nav-signup-btn", "#signup-section", false);
 addEventListernersToButtons("#learnmore-btn", "#features-section", false);
 
+window.onload = function() {
+    animateHeroSection();
+};
 
 
 //------------HELPER FUNCTIONS------------
 function toggleDropdownNav() {
     if (isDropdownNavOpen) {
         animateCloseNavToggle();
-        //document.querySelector("#nav-dropdown").style.display = "none";
         isDropdownNavOpen = false;
     } else {
         document.querySelector("#nav-dropdown").style.display = "block";
@@ -156,4 +158,28 @@ function animateCloseNavToggle() {
             document.querySelector("#nav-dropdown").style.display = "none";
         }
     });
+}
+
+function animateHeroSection() {
+    var timeline = anime.timeline({
+        duration: 500,
+        easing: 'easeInOutQuad'
+    });
+
+    timeline.add({
+        targets: "#hero-left-column h1",
+        translateY: [80, 0],
+        opacity: [0, 1],
+        duration: 800
+    })
+    .add({
+        targets: "#hero-left-column p",
+        translateY: [20, 0],
+        opacity: [0, 1],
+    }, "+=700")
+    .add({
+        targets: ["#hero-left-column img", "#hero-left-column a"],
+        translateY: [20, 0],
+        opacity: [0, 1],
+    })
 }
