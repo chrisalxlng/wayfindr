@@ -25,10 +25,12 @@ addEventListernersToButtons("#learnmore-btn", "#features-section", false);
 //------------HELPER FUNCTIONS------------
 function toggleDropdownNav() {
     if (isDropdownNavOpen) {
-        document.querySelector("#nav-dropdown").style.display = "none";
+        animateCloseNavToggle();
+        //document.querySelector("#nav-dropdown").style.display = "none";
         isDropdownNavOpen = false;
     } else {
         document.querySelector("#nav-dropdown").style.display = "block";
+        animateOpenNavToggle();
         isDropdownNavOpen = true;
     } 
 }
@@ -117,4 +119,41 @@ function fadeIn(element, from) {
     }
 }
 
+function animateOpenNavToggle() {
+    var timeline = anime.timeline({
+        duration: 200,
+        easing: 'easeInOutQuad'
+    });
 
+    timeline.add({
+        targets: "#nav-dropdown",
+        translateY: [-20, 0],
+        opacity: [0, 1],
+    })
+    .add({
+        targets: "#nav-dropdown li",
+        translateX: [20, 0],
+        opacity: [0, 1],
+    });
+}
+
+function animateCloseNavToggle() {
+    var timeline = anime.timeline({
+        duration: 200,
+        easing: 'easeInOutQuad'
+    });
+
+    timeline.add({
+        targets: "#nav-dropdown li",
+        translateX: [0, 20],
+        opacity: [1, 0],
+    })
+    .add({
+        targets: "#nav-dropdown",
+        translateY: [0, -20],
+        opacity: [1, 0],
+        complete: function(anim) {
+            document.querySelector("#nav-dropdown").style.display = "none";
+        }
+    });
+}
