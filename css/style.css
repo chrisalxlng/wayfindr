@@ -231,6 +231,10 @@ nav .nav-ul li .nav-link.main-cta {
   background-color: white;
 }
 
+#features-section .features-grid .features-grid-element {
+  opacity: 0;
+}
+
 #features-section .features-grid .features-grid-element .features-svg-container {
   position: relative;
 }
