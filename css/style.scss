@@ -378,6 +378,8 @@ nav {
 
             .dot-wrapper {
                 padding: 10px 20px;
+                display: flex;
+                justify-content: center;
 
                 .dot {
                     height: 15px;
@@ -385,7 +387,6 @@ nav {
                     border-radius: 50%;
                     border: 2px $main-color solid;
                     display: inline-block;
-                    
                 }
         
                 .active {
