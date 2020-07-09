@@ -363,23 +363,38 @@ nav {
         }
     }
 
-    .dot-container {
-        text-align: center;
-        margin-top: 20px;
+    .dot-con-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        .dot {
-            height: 15px;
-            width: 15px;
-            border-radius: 50%;
-            border: 2px $main-color solid;
-            display: inline-block;
-            margin: 0 20px;
-        }
+        .dot-container {
+            background-color: rgba($secondary-color, $alpha: 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
 
-        .active {
-            background-color: $main-color;
+            .dot-wrapper {
+                padding: 10px 20px;
+
+                .dot {
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 50%;
+                    border: 2px $main-color solid;
+                    display: inline-block;
+                    
+                }
+        
+                .active {
+                    background-color: $main-color;
+                }
+            }            
         }
     }
+    
 }
 
 #signup-section {

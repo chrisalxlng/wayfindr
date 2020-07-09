@@ -393,21 +393,48 @@ nav .nav-ul li .nav-link.main-cta {
   font-size: 13px;
 }
 
-#pricing-section .dot-container {
-  text-align: center;
-  margin-top: 20px;
+#pricing-section .dot-con-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#pricing-section .dot-container .dot {
+#pricing-section .dot-con-wrapper .dot-container {
+  background-color: rgba(198, 198, 255, 0.2);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#pricing-section .dot-con-wrapper .dot-container .dot-wrapper {
+  padding: 10px 20px;
+}
+
+#pricing-section .dot-con-wrapper .dot-container .dot-wrapper .dot {
   height: 15px;
   width: 15px;
   border-radius: 50%;
   border: 2px #416FD6 solid;
   display: inline-block;
-  margin: 0 20px;
 }
 
-#pricing-section .dot-container .active {
+#pricing-section .dot-con-wrapper .dot-container .dot-wrapper .active {
   background-color: #416FD6;
 }
 

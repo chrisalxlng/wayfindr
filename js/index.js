@@ -20,9 +20,19 @@ addEventListernersToButtons("#signup-btn", "#signup-section", true);
 addEventListernersToButtons("#nav-signup-btn", "#signup-section", false);
 addEventListernersToButtons("#learnmore-btn", "#features-section", false);
 
+document.querySelector("#dot-wrapper-1").addEventListener("click", function() {
+    scrollPricingContainerToCard(1, true);
+});
+document.querySelector("#dot-wrapper-2").addEventListener("click", function() {
+    scrollPricingContainerToCard(2, true);
+});
+document.querySelector("#dot-wrapper-3").addEventListener("click", function() {
+    scrollPricingContainerToCard(3, true);
+});
+
 window.onload = function() {
     animateHeroSection();
-    scrollPricingContainerToCenter();    
+    scrollPricingContainerToCard(2, false);    
 };
 
 document.querySelector(".pricing-cards-container").onscroll = function() {
@@ -85,8 +95,8 @@ window.onscroll = function() {
     }, 100);
 };
 
-function scrollPricingContainerToCenter() {
-    var pricingCard = document.querySelector("#pricing-card-2");
+function scrollPricingContainerToCard(number, animate) {
+    var pricingCard = document.querySelector("#pricing-card-" + number);
 
     var pricingContainer = document.querySelector(".pricing-cards-container");
 
@@ -98,9 +108,13 @@ function scrollPricingContainerToCenter() {
 
     var gapCardViewport = (window.innerWidth - widthPricingCard) / 2;
 
-    var centerScrollPos = leftBorderPricingCard - gapCardViewport;
+    var cardScrollPos = leftBorderPricingCard - gapCardViewport;
 
-    pricingContainer.scrollTo(centerScrollPos, 0);
+    if (!animate) {
+        pricingContainer.scrollTo(cardScrollPos, 0);
+    } else {
+        scrollToCardAnimation("+=" + cardScrollPos);
+    }
 }
 
 function checkForPricingContainerScrollPosition() {
@@ -145,6 +159,15 @@ function scrollTo(target) {
       easing: 'easeInOutQuad'
     });
 }
+
+function scrollToCardAnimation(scrollPosition) {
+    anime({
+        targets: ".pricing-cards-container",
+        scrollLeft: scrollPosition,
+        duration: 500,
+        easing: 'easeInOutQuad'
+    });
+} 
 
 function fadeIn(element, from) {
     var formalizedElement = formalizeElementName(element);
