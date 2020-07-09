@@ -471,6 +471,7 @@ nav .nav-ul li .nav-link.main-cta {
 }
 
 #signup-section .signup-section-content p {
+  opacity: 0;
   font-size: 18px;
   font-weight: 500;
 }
@@ -480,6 +481,7 @@ nav .nav-ul li .nav-link.main-cta {
 }
 
 #signup-section .signup-section-content form {
+  opacity: 0;
   margin-top: 50px;
   width: 100%;
 }

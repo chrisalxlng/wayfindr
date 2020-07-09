@@ -4,7 +4,8 @@ var scrollInExecuted = {
     feature1: false,
     feature2: false,
     feature3: false,
-    pricingCardsContainer: false
+    pricingCardsContainer: false,
+    signupSection: false
 };
 
 
@@ -83,6 +84,7 @@ var scroll = function () {
     fadeIn("#feature-2", -200);
     fadeIn("#feature-3", 200);
     animatePricingSection();
+    animateSignupSection();
 };
 var waiting = false;
 window.onscroll = function() {
@@ -282,4 +284,27 @@ function animatePricingSection() {
     }
 }
 
+function animateSignupSection() {
+    var element = document.querySelector(".signup-section-content");
 
+    if (!scrollInExecuted["signupSection"]) {
+        if (isElementInViewport(element)) {
+            var timeline = anime.timeline({
+                duration: 800,
+                easing: 'easeInOutQuad'
+            });
+        
+            timeline.add({
+                targets: ".signup-section-content p",
+                scale: [0.95, 1],
+                opacity: [0, 1],
+            })
+            .add({
+                targets: ".signup-form",
+                opacity: [0, 1],
+            }, "-=300")
+
+            scrollInExecuted["signupSection"] = true;
+        }
+    }
+}
