@@ -53,6 +53,13 @@ function toggleDropdownNav() {
     } 
 }
 
+function closeDropdownNav() {
+    if (isDropdownNavOpen) {
+        animateCloseNavToggle();
+        isDropdownNavOpen = false;
+    }
+}
+
 function addEventListernersToButtons(button, target, isNavLink) {
     document.querySelector(button).addEventListener("click", function() {
         scrollTo(target);
@@ -85,6 +92,7 @@ var scroll = function () {
     fadeIn("#feature-3", 200);
     animatePricingSection();
     animateSignupSection();
+    closeDropdownNav()
 };
 var waiting = false;
 window.onscroll = function() {
@@ -197,7 +205,7 @@ function fadeIn(element, from) {
 
 function animateOpenNavToggle() {
     var timeline = anime.timeline({
-        duration: 200,
+        duration: 300,
         easing: 'easeInOutQuad'
     });
 
@@ -210,12 +218,12 @@ function animateOpenNavToggle() {
         targets: "#nav-dropdown li",
         translateX: [20, 0],
         opacity: [0, 1],
-    });
+    }, "-=200");
 }
 
 function animateCloseNavToggle() {
     var timeline = anime.timeline({
-        duration: 200,
+        duration: 300,
         easing: 'easeInOutQuad'
     });
 
@@ -231,29 +239,29 @@ function animateCloseNavToggle() {
         complete: function(anim) {
             document.querySelector("#nav-dropdown").style.display = "none";
         }
-    });
+    }, "-=200");
 }
 
 function animateHeroSection() {
     var timeline = anime.timeline({
-        duration: 500,
+        duration: 600,
         easing: 'easeInOutQuad'
     });
 
     timeline.add({
         targets: "#hero-left-column h1",
-        translateY: [80, 0],
+        translateY: [20, 0],
         opacity: [0, 1],
-        duration: 500
+        duration: 800
     })
     .add({
         targets: "#hero-left-column p",
-        translateY: [20, 0],
+        translateY: [10, 0],
         opacity: [0, 1],
-    }, "+=700")
+    }, "-=300")
     .add({
         targets: ["#hero-left-column img", "#hero-left-column a"],
-        translateY: [20, 0],
+        translateY: [10, 0],
         opacity: [0, 1],
     }, "-=200")
 }
