@@ -269,6 +269,7 @@ nav {
 #pricing-section {
 
     .pricing-cards-container {
+        opacity: 0;
         display: flex;
         overflow: auto;
         padding-top: 8px;
@@ -364,6 +365,7 @@ nav {
     }
 
     .dot-con-wrapper {
+        opacity: 0;
         display: flex;
         justify-content: center;
         align-items: center;

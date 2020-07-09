@@ -3,7 +3,8 @@ var isDropdownNavOpen = false;
 var scrollInExecuted = {
     feature1: false,
     feature2: false,
-    feature3: false
+    feature3: false,
+    pricingCardsContainer: false
 };
 
 
@@ -63,6 +64,7 @@ function addEventListernersToButtons(button, target, isNavLink) {
 
 function formalizeElementName(element) {
     var result = element.replace("#", "");
+    result = result.replace(".", "");
     result = result.replace("-", "");
     
     return result;
@@ -80,6 +82,7 @@ var scroll = function () {
     fadeIn("#feature-1", 200);
     fadeIn("#feature-2", -200);
     fadeIn("#feature-3", 200);
+    animatePricingSection();
 };
 var waiting = false;
 window.onscroll = function() {
@@ -252,3 +255,31 @@ function animateHeroSection() {
         opacity: [0, 1],
     }, "-=200")
 }
+
+function animatePricingSection() {
+    var element = document.querySelector(".pricing-cards-container");
+
+    if (!scrollInExecuted["pricingCardsContainer"]) {
+        if (isElementInViewport(element)) {
+            var timeline = anime.timeline({
+                duration: 800,
+                easing: 'easeInOutQuad'
+            });
+        
+            timeline.add({
+                targets: ".pricing-cards-container",
+                translateY: [20, 0],
+                opacity: [0, 1],
+            })
+            .add({
+                targets: ".dot-con-wrapper",
+                translateY: [10, 0],
+                opacity: [0, 1],
+            }, "-=300")
+
+            scrollInExecuted["pricingCardsContainer"] = true;
+        }
+    }
+}
+
+

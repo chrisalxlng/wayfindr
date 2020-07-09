@@ -282,6 +282,7 @@ nav .nav-ul li .nav-link.main-cta {
 }
 
 #pricing-section .pricing-cards-container {
+  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,6 +395,7 @@ nav .nav-ul li .nav-link.main-cta {
 }
 
 #pricing-section .dot-con-wrapper {
+  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
