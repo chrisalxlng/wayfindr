@@ -392,6 +392,7 @@ nav {
                     border-radius: 50%;
                     border: 2px $main-color solid;
                     display: inline-block;
+                    transition: .3s;
                 }
         
                 .active {

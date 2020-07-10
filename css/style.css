@@ -443,6 +443,8 @@ nav .nav-ul li .nav-link.main-cta {
   border-radius: 50%;
   border: 2px #416FD6 solid;
   display: inline-block;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 #pricing-section .dot-con-wrapper .dot-container .dot-wrapper .active {
