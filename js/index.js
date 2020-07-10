@@ -15,12 +15,12 @@ var scrollInExecuted = {
 document.querySelector("#nav-toggle").addEventListener("click", toggleDropdownNav);
 
 // ADDING EVENTLISTENERS TO BUTTONS
-addEventListernersToButtons("#home-btn", "#hero-section", true);
-addEventListernersToButtons("#features-btn", "#features-section", true);
-addEventListernersToButtons("#pricing-btn", "#pricing-section", true);
-addEventListernersToButtons("#signup-btn", "#signup-section", true);
-addEventListernersToButtons("#nav-signup-btn", "#signup-section", false);
-addEventListernersToButtons("#learnmore-btn", "#features-section", false);
+addEventListernersToButtons("#home-btn", "#hero-section", true, false);
+addEventListernersToButtons("#features-btn", "#features-section", true, false);
+addEventListernersToButtons("#pricing-btn", "#pricing-section", true, false);
+addEventListernersToButtons("#signup-btn", "#signup-section", true, true);
+addEventListernersToButtons("#nav-signup-btn", "#signup-section", false, true);
+addEventListernersToButtons("#learnmore-btn", "#features-section", false, true);
 
 document.querySelector("#dot-wrapper-1").addEventListener("click", function() {
     scrollPricingContainerToCard(1, true);
@@ -60,10 +60,33 @@ function closeDropdownNav() {
     }
 }
 
-function addEventListernersToButtons(button, target, isNavLink) {
-    document.querySelector(button).addEventListener("click", function() {
-        scrollTo(target);
+function addEventListernersToButtons(button, target, isNavLink, hasIcon) {
 
+    var buttonElement = document.querySelector(button);
+    var animTargets = buttonElement;
+
+    if(hasIcon) {
+        var iconElement = document.querySelector(button + " i");
+        animTargets = [buttonElement, iconElement];
+    }
+
+    buttonElement.addEventListener("click", function() {
+        var timeline = anime.timeline({
+            duration: 100,
+        });
+
+        timeline.add({
+            targets: animTargets,
+            scale: [1, 0.95],
+            easing: 'easeInSine'
+        })
+        .add({
+            targets: animTargets,
+            scale: [0.95, 1],
+            easing: 'easeOutSine',
+        });
+
+        scrollTo(target);
         if (isNavLink) {
             toggleDropdownNav();
         }
@@ -163,14 +186,16 @@ function scrollTo(target) {
     const elementOffset = elementSelector.getBoundingClientRect().top;
     const scrollPosition = window.scrollY;
     const documentTop = document.documentElement.clientTop;
-    const scrollOffset = elementOffset + scrollPosition - documentTop;
+    const scrollOffset = elementOffset + scrollPosition - documentTop - 45;
 
-    anime({
-      targets: [document.documentElement, document.body],
-      scrollTop: scrollOffset - 45,
-      duration: 500,
-      easing: 'easeInOutQuad'
-    });
+    if(scrollPosition != scrollOffset) {
+        anime({
+            targets: [document.documentElement, document.body],
+            scrollTop: scrollOffset,
+            duration: 500,
+            easing: 'easeInOutQuad'
+        });
+    }
 }
 
 function scrollToCardAnimation(scrollPosition) {

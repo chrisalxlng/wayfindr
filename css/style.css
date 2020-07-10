@@ -34,6 +34,8 @@ p {
 }
 
 .button {
+  position: relative;
+  overflow: hidden;
   border-radius: 5px;
   height: 45px;
   display: -webkit-box;
