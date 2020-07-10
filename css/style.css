@@ -434,6 +434,7 @@ nav .nav-ul li .nav-link.main-cta {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 #pricing-section .dot-con-wrapper .dot-container .dot-wrapper .dot {

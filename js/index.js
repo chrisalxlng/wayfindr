@@ -22,6 +22,9 @@ addEventListernersToButtons("#signup-btn", "#signup-section", true, true);
 addEventListernersToButtons("#nav-signup-btn", "#signup-section", false, true);
 addEventListernersToButtons("#learnmore-btn", "#features-section", false, true);
 
+document.querySelector("#nav-toggle").addEventListener("click", function() {
+    animateButtonPressed("#nav-toggle", 0.85);
+});
 document.querySelector("#dot-wrapper-1").addEventListener("click", function() {
     scrollPricingContainerToCard(1, true);
 });
@@ -71,20 +74,7 @@ function addEventListernersToButtons(button, target, isNavLink, hasIcon) {
     }
 
     buttonElement.addEventListener("click", function() {
-        var timeline = anime.timeline({
-            duration: 100,
-        });
-
-        timeline.add({
-            targets: animTargets,
-            scale: [1, 0.95],
-            easing: 'easeInSine'
-        })
-        .add({
-            targets: animTargets,
-            scale: [0.95, 1],
-            easing: 'easeOutSine',
-        });
+        animateButtonPressed(animTargets, 0.95);
 
         scrollTo(target);
         if (isNavLink) {
@@ -340,4 +330,21 @@ function animateSignupSection() {
             scrollInExecuted["signupSection"] = true;
         }
     }
+}
+
+function animateButtonPressed(targets, pressStrength) {
+    var timeline = anime.timeline({
+        duration: 100,
+    });
+
+    timeline.add({
+        targets: targets,
+        scale: [1, pressStrength],
+        easing: 'easeInSine'
+    })
+    .add({
+        targets: targets,
+        scale: [pressStrength, 1],
+        easing: 'easeOutSine',
+    });
 }
