@@ -209,9 +209,12 @@
 
             <form class="signup-form">
                 <label for="mail">Sign up with your e-mail address:</label>
+                <div id="invalid-mail-prompt">
+                    <p></p>
+                </div>
                 <div class="input-submit-container">
-                    <input type="email" name="mail" placeholder="john.doe@example.com">
-                    <button class="button" type="submit"><i class="fas fa-pen"></i>Sign up</button>
+                    <input class="mail-input" type="email" name="mail" placeholder="john.doe@example.com">
+                    <a class="button signup-button signup-button-static"><i class="fas fa-pen"></i> <span>Sign up</span></a>
                 </div>
             </form>
         </div>

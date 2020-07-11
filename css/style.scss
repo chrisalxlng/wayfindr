@@ -432,18 +432,37 @@ nav {
             opacity: 0;
             margin-top: 50px;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 
             label {
-                float: left;
                 font-size: 13px;
                 font-weight: 500;
                 margin-bottom: 5px;
             }
 
+            .invalid-mail-prompt {
+                background-color: rgba($color: #D32E2E, $alpha: 1.0);
+                border-radius: 5px;
+                width: 100%;
+                margin-bottom: 5px;
+                transition: .2s;
+
+                p {
+                    padding: 5px 20px;
+                    font-size: 11px;
+                    color: white;
+                }
+            }
+
             .input-submit-container {
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
-                input {
+                .mail-input {
                     width: 100%;
                     margin-bottom: 20px;
                     border: 1px $secondary-color solid;
@@ -456,12 +475,22 @@ nav {
                     }
                 }
 
-                button {
-                    width: 100%;
+                .signup-button {
                     border: none;
                     color: white;
-                    background-color: $main-color;
                     font-size: 16px;
+                }
+
+                .signup-button-static {
+                    width: 100%;
+                    background-color: $main-color;
+                    transition: .3s;
+                }
+
+                .signup-button-complete {
+                    width: 40%;
+                    background-color: #38B238;
+                    transition: .3s;
                 }
             }
         }

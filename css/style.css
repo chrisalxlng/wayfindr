@@ -489,20 +489,54 @@ nav .nav-ul li .nav-link.main-cta {
   opacity: 0;
   margin-top: 50px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 #signup-section .signup-section-content form label {
-  float: left;
   font-size: 13px;
   font-weight: 500;
   margin-bottom: 5px;
 }
 
-#signup-section .signup-section-content form .input-submit-container {
+#signup-section .signup-section-content form .invalid-mail-prompt {
+  background-color: #d32e2e;
+  border-radius: 5px;
   width: 100%;
+  margin-bottom: 5px;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
-#signup-section .signup-section-content form .input-submit-container input {
+#signup-section .signup-section-content form .invalid-mail-prompt p {
+  padding: 5px 20px;
+  font-size: 11px;
+  color: white;
+}
+
+#signup-section .signup-section-content form .input-submit-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#signup-section .signup-section-content form .input-submit-container .mail-input {
   width: 100%;
   margin-bottom: 20px;
   border: 1px #C6C6FF solid;
@@ -511,16 +545,28 @@ nav .nav-ul li .nav-link.main-cta {
   padding: 10px;
 }
 
-#signup-section .signup-section-content form .input-submit-container input:focus {
+#signup-section .signup-section-content form .input-submit-container .mail-input:focus {
   border: 2px #416FD6 solid;
 }
 
-#signup-section .signup-section-content form .input-submit-container button {
-  width: 100%;
+#signup-section .signup-section-content form .input-submit-container .signup-button {
   border: none;
   color: white;
-  background-color: #416FD6;
   font-size: 16px;
+}
+
+#signup-section .signup-section-content form .input-submit-container .signup-button-static {
+  width: 100%;
+  background-color: #416FD6;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#signup-section .signup-section-content form .input-submit-container .signup-button-complete {
+  width: 40%;
+  background-color: #38B238;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 footer {

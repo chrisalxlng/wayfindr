@@ -1,5 +1,6 @@
 //------------GLOBAL VARIABLES------------
 var isDropdownNavOpen = false;
+var signupButtonStatic = true;
 var scrollInExecuted = {
     feature1: false,
     feature2: false,
@@ -33,6 +34,10 @@ document.querySelector("#dot-wrapper-2").addEventListener("click", function() {
 });
 document.querySelector("#dot-wrapper-3").addEventListener("click", function() {
     scrollPricingContainerToCard(3, true);
+});
+document.querySelector(".signup-button").addEventListener("click", function() {
+    animateButtonPressed(".signup-button", 0.95);
+    checkForValidMail();
 });
 
 window.onload = function() {
@@ -165,6 +170,20 @@ function styleActiveDot(number) {
     var element = document.querySelector("#dot-" + number);
     document.querySelector(".active").classList.remove("active");
     element.classList.add("active");
+}
+
+function checkForValidMail() {
+    var button = document.querySelector(".signup-button");
+    var buttonText = document.querySelector(".signup-button span");
+    var buttonIcon = document.querySelector(".signup-button i");
+    var inputField = document.querySelector(".mail-input");
+    var mailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if(mailRegEx.test(inputField.value)) {
+        animateSignupForValidMail(button, buttonText, buttonIcon, inputField);
+    } else {
+        animateSignupForInvalidMail(button, buttonText, buttonIcon, inputField);
+    }
 }
 
 
@@ -347,4 +366,97 @@ function animateButtonPressed(targets, pressStrength) {
         scale: [pressStrength, 1],
         easing: 'easeOutSine',
     });
+}
+
+function animateSignupForValidMail(button, buttonText, buttonIcon, inputField) {
+    var timeline = anime.timeline({
+        duration: 300,
+        easing: "easeInOutQuad"
+    });
+
+    timeline.add({
+        begin: function() {
+            inputField.style.border = "1px #C6C6FF solid";
+            document.querySelector("#invalid-mail-prompt p").innerHTML = "";
+            document.querySelector("#invalid-mail-prompt").classList.remove("invalid-mail-prompt");
+        },
+        targets: buttonText,
+        translateX: [0, -20],
+        opacity: [1, 0]
+    })
+    .add({
+        targets: buttonIcon,
+        translateX: [0, 20],
+        opacity: [1, 0],
+        begin: function() {
+            button.classList.remove("signup-button-static");
+            button.classList.add("signup-button-complete");
+        },
+        complete: function() {
+            buttonText.innerHTML = "Done";
+            buttonIcon.classList.remove("fa-pen");
+            buttonIcon.classList.add("fa-check");
+        }
+    }, "-=300")
+    .add({
+        targets: buttonText,
+        translateX: [-5, 0],
+        opacity: [0, 1]
+    })
+    .add({
+        targets: buttonIcon,
+        translateX: [5, 0],
+        opacity: [0, 1]
+    }, "-=300")
+    .add({
+        targets: buttonText,
+        opacity: [1, 0]
+    }, "+=1000")
+    .add({
+        targets: buttonIcon,
+        opacity: [1, 0],
+        complete: function(){
+            button.classList.remove("signup-button-complete");
+            button.classList.add("signup-button-static");
+        }
+    }, "-=300")
+    .add({
+        targets: buttonText,
+        opacity: [0, 1]
+    })
+    .add({
+        targets: buttonIcon,
+        opacity: [0, 1],
+        begin: function(){
+            buttonText.innerHTML = "Sign up";
+            buttonIcon.classList.remove("fa-check");
+            buttonIcon.classList.add("fa-pen");
+            inputField.value = "";
+        }
+    }, "-=300")
+}
+
+function animateSignupForInvalidMail(button, buttonText, buttonIcon, inputField) {
+    var timeline = anime.timeline({
+        duration: 100,
+        easing: "easeInOutQuad"
+    });
+
+    timeline.add({
+        targets: [buttonText, buttonIcon],
+        translateX: [0, 30],
+        begin: function() {
+            inputField.style.border = "2px #D32E2E solid";
+            document.querySelector("#invalid-mail-prompt p").innerHTML = "Invalid E-Mail address";
+            document.querySelector("#invalid-mail-prompt").classList.add("invalid-mail-prompt");
+        }
+    })
+    .add({
+        targets: [buttonText, buttonIcon],
+        translateX: [30, -30],
+    })
+    .add({
+        targets: [buttonText, buttonIcon],
+        translateX: [-30, 0],
+    })
 }
