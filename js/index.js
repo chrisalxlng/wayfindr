@@ -39,6 +39,10 @@ document.querySelector(".signup-button").addEventListener("click", function() {
     animateButtonPressed(".signup-button", 0.95);
     checkForValidMail();
 });
+document.querySelector(".language-button").addEventListener("click", function() {
+    animateButtonPressed(".language-button", 0.95);
+    //checkForValidMail();
+});
 
 window.onload = function() {
     animateHeroSection();
@@ -447,7 +451,7 @@ function animateSignupForInvalidMail(button, buttonText, buttonIcon, inputField)
         translateX: [0, 30],
         begin: function() {
             inputField.style.border = "2px #D32E2E solid";
-            document.querySelector("#invalid-mail-prompt p").innerHTML = "Invalid E-Mail address";
+            document.querySelector("#invalid-mail-prompt p").innerHTML = "Invalid e-mail address";
             document.querySelector("#invalid-mail-prompt").classList.add("invalid-mail-prompt");
         }
     })

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
@@ -49,10 +50,21 @@ p {
           align-items: center;
   font-weight: 500;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .button i {
   margin-right: 10px;
+}
+
+.no-select  {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .section-padding {
@@ -154,6 +166,10 @@ nav .navbar .cta-hamburger-container a {
   font-size: 10px;
   color: white;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 nav .navbar .cta-hamburger-container a i {
@@ -188,6 +204,10 @@ nav .nav-ul li .nav-link {
   padding: 10px;
   text-align: center;
   font-weight: 500;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 nav .nav-ul li .nav-link i {
