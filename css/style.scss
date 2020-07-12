@@ -429,7 +429,7 @@ nav {
             font-size: 18px;
             font-weight: 500;
 
-            span {
+            .span {
                 color: $main-color;
             }
         }
@@ -454,12 +454,13 @@ nav {
                 width: 100%;
                 margin-bottom: 5px;
                 transition: .2s;
+            }
 
-                p {
-                    padding: 5px 20px;
-                    font-size: 11px;
-                    color: white;
-                }
+            .invalid-mail-prompt-text {
+                display: none;
+                padding: 5px 20px;
+                font-size: 11px;
+                color: white;
             }
 
             .input-submit-container {
@@ -485,6 +486,10 @@ nav {
                     border: none;
                     color: white;
                     font-size: 16px;
+
+                    .done-text {
+                        display: none;
+                    }
                 }
 
                 .signup-button-static {
@@ -574,7 +579,7 @@ footer {
                     color: white;
                 }
 
-                span {
+                .span {
                     margin-left: 3px;
                     margin-right: 3px;
                 }

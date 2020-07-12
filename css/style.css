@@ -501,7 +501,7 @@ nav .nav-ul li .nav-link.main-cta {
   font-weight: 500;
 }
 
-#signup-section .signup-section-content p span {
+#signup-section .signup-section-content p .span {
   color: #416FD6;
 }
 
@@ -536,7 +536,8 @@ nav .nav-ul li .nav-link.main-cta {
   transition: .2s;
 }
 
-#signup-section .signup-section-content form .invalid-mail-prompt p {
+#signup-section .signup-section-content form .invalid-mail-prompt-text {
+  display: none;
   padding: 5px 20px;
   font-size: 11px;
   color: white;
@@ -573,6 +574,10 @@ nav .nav-ul li .nav-link.main-cta {
   border: none;
   color: white;
   font-size: 16px;
+}
+
+#signup-section .signup-section-content form .input-submit-container .signup-button .done-text {
+  display: none;
 }
 
 #signup-section .signup-section-content form .input-submit-container .signup-button-static {
@@ -670,7 +675,7 @@ footer .lower-section .links-copyright-container .lower-footer-links a {
   color: white;
 }
 
-footer .lower-section .links-copyright-container .lower-footer-links span {
+footer .lower-section .links-copyright-container .lower-footer-links .span {
   margin-left: 3px;
   margin-right: 3px;
 }

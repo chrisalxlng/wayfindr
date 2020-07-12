@@ -41,7 +41,7 @@ document.querySelector(".signup-button").addEventListener("click", function() {
 });
 document.querySelector(".language-button").addEventListener("click", function() {
     animateButtonPressed(".language-button", 0.95);
-    //checkForValidMail();
+    setLanguage();
 });
 
 window.onload = function() {
@@ -178,16 +178,83 @@ function styleActiveDot(number) {
 
 function checkForValidMail() {
     var button = document.querySelector(".signup-button");
-    var buttonText = document.querySelector(".signup-button span");
+    var buttonText = document.querySelector(".signup-button .signup-text");
+    var buttonDoneText = document.querySelector(".signup-button .done-text");
     var buttonIcon = document.querySelector(".signup-button i");
     var inputField = document.querySelector(".mail-input");
     var mailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if(mailRegEx.test(inputField.value)) {
-        animateSignupForValidMail(button, buttonText, buttonIcon, inputField);
+        animateSignupForValidMail(button, buttonText, buttonDoneText, buttonIcon, inputField);
     } else {
         animateSignupForInvalidMail(button, buttonText, buttonIcon, inputField);
     }
+}
+
+function setLanguage() {
+    fetch("./language/de.json")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        // Nav section
+        setTextInTag(".lang-home", data.home);
+        setTextInTag(".lang-features", data.features);
+        setTextInTag(".lang-pricing", data.pricing);
+        setTextInTag(".lang-signup", data.signup);
+
+        // Hero section
+        setTextInTag(".lang-hero1", data.hero1);
+        setTextInTag(".lang-hero2", data.hero2);
+        setTextInTag(".lang-learnmore", data.learnmore);
+
+        // Features section
+        setTextInTag(".lang-feature1heading", data.feature1heading);
+        setTextInTag(".lang-feature1text", data.feature1text);
+        setTextInTag(".lang-feature2heading", data.feature2heading);
+        setTextInTag(".lang-feature2text", data.feature2text);
+        setTextInTag(".lang-feature3heading", data.feature3heading);
+        setTextInTag(".lang-feature3text", data.feature3text);
+
+        // Pricing section
+        setTextInTag(".lang-price1", data.price1);
+        setTextInTag(".lang-price2", data.price2);
+        setTextInTag(".lang-pricebullet1", data.pricebullet1);
+        setTextInTag(".lang-pricebullet2", data.pricebullet2);
+        setTextInTag(".lang-pricebullet3", data.pricebullet3);
+        setTextInTag(".lang-pricebullet4", data.pricebullet4);
+
+        // Signup section
+        setTextInTag(".lang-signupheader1", data.signupheader1);
+        setTextInTag(".lang-signupheader2", data.signupheader2);
+        setTextInTag(".lang-signuplabel", data.signuplabel);
+        setTextInTag(".lang-invalidmail", data.invalidmail);
+        setTextInTag(".lang-done", data.done);
+
+        // Footer section
+        setTextInTag(".lang-followus", data.followus);
+        setTextInTag(".lang-getstarted", data.getstarted);
+        setTextInTag(".lang-resources", data.resources);
+        setTextInTag(".lang-helpcenter", data.helpcenter);
+        setTextInTag(".lang-referafriend", data.referafriend);
+        setTextInTag(".lang-integrations", data.integrations);
+        setTextInTag(".lang-developerapi", data.developerapi);
+        setTextInTag(".lang-company", data.company);
+        setTextInTag(".lang-aboutus", data.aboutus);
+        setTextInTag(".lang-jobs", data.jobs);
+        setTextInTag(".lang-blog", data.blog);
+        setTextInTag(".lang-press", data.press);
+        setTextInTag(".lang-security", data.security);
+        setTextInTag(".lang-privacy", data.privacy);
+        setTextInTag(".lang-terms", data.terms);
+        setTextInTag(".lang-changelanguage", data.changelanguage);
+    });
+}
+
+function setTextInTag(target, text) {
+    document.querySelectorAll(target).forEach(function(tag) {
+        tag.innerHTML = text;
+    });
 }
 
 
@@ -372,7 +439,7 @@ function animateButtonPressed(targets, pressStrength) {
     });
 }
 
-function animateSignupForValidMail(button, buttonText, buttonIcon, inputField) {
+function animateSignupForValidMail(button, buttonText, buttonDoneText, buttonIcon, inputField) {
     var timeline = anime.timeline({
         duration: 300,
         easing: "easeInOutQuad"
@@ -381,7 +448,7 @@ function animateSignupForValidMail(button, buttonText, buttonIcon, inputField) {
     timeline.add({
         begin: function() {
             inputField.style.border = "1px #C6C6FF solid";
-            document.querySelector("#invalid-mail-prompt p").innerHTML = "";
+            document.querySelector("#invalid-mail-prompt p").style.display = "none";
             document.querySelector("#invalid-mail-prompt").classList.remove("invalid-mail-prompt");
         },
         targets: buttonText,
@@ -397,13 +464,14 @@ function animateSignupForValidMail(button, buttonText, buttonIcon, inputField) {
             button.classList.add("signup-button-complete");
         },
         complete: function() {
-            buttonText.innerHTML = "Done";
+            buttonText.style.display = "none";
+            buttonDoneText.style.display = "block";
             buttonIcon.classList.remove("fa-pen");
             buttonIcon.classList.add("fa-check");
         }
     }, "-=300")
     .add({
-        targets: buttonText,
+        targets: buttonDoneText,
         translateX: [-5, 0],
         opacity: [0, 1]
     })
@@ -413,7 +481,7 @@ function animateSignupForValidMail(button, buttonText, buttonIcon, inputField) {
         opacity: [0, 1]
     }, "-=300")
     .add({
-        targets: buttonText,
+        targets: buttonDoneText,
         opacity: [1, 0]
     }, "+=1000")
     .add({
@@ -426,13 +494,18 @@ function animateSignupForValidMail(button, buttonText, buttonIcon, inputField) {
     }, "-=300")
     .add({
         targets: buttonText,
+        translateX: [-20, 0]
+    }, "-=300")
+    .add({
+        targets: buttonText,
         opacity: [0, 1]
     })
     .add({
         targets: buttonIcon,
         opacity: [0, 1],
         begin: function(){
-            buttonText.innerHTML = "Sign up";
+            buttonDoneText.style.display = "none";
+            buttonText.style.display = "block";
             buttonIcon.classList.remove("fa-check");
             buttonIcon.classList.add("fa-pen");
             inputField.value = "";
@@ -451,7 +524,7 @@ function animateSignupForInvalidMail(button, buttonText, buttonIcon, inputField)
         translateX: [0, 30],
         begin: function() {
             inputField.style.border = "2px #D32E2E solid";
-            document.querySelector("#invalid-mail-prompt p").innerHTML = "Invalid e-mail address";
+            document.querySelector("#invalid-mail-prompt p").style.display = "block";
             document.querySelector("#invalid-mail-prompt").classList.add("invalid-mail-prompt");
         }
     })
