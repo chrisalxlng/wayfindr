@@ -248,6 +248,7 @@ function setLanguage() {
         setTextInTag(".lang-privacy", data.privacy);
         setTextInTag(".lang-terms", data.terms);
         setTextInTag(".lang-changelanguage", data.changelanguage);
+        setTextInTag(".lang-iconsprovidedby", data.iconsprovidedby);
     });
 }
 

@@ -680,6 +680,14 @@ footer .lower-section .links-copyright-container .lower-footer-links .span {
   margin-right: 3px;
 }
 
+footer .lower-section .links-copyright-container .icons-copyright {
+  margin-bottom: 2px;
+}
+
+footer .lower-section .links-copyright-container .icons-copyright a {
+  color: white;
+}
+
 footer .lower-section .links-copyright-container .copyright {
   font-size: 10px;
 }
