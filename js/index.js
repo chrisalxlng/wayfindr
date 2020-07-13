@@ -1,6 +1,7 @@
 //------------GLOBAL VARIABLES------------
 var isDropdownNavOpen = false;
 var signupButtonStatic = true;
+var inactiveLanguage = "de";
 var scrollInExecuted = {
     feature1: false,
     feature2: false,
@@ -41,7 +42,7 @@ document.querySelector(".signup-button").addEventListener("click", function() {
 });
 document.querySelector(".language-button").addEventListener("click", function() {
     animateButtonPressed(".language-button", 0.95);
-    setLanguage();
+    setLanguage(inactiveLanguage);
 });
 
 window.onload = function() {
@@ -191,8 +192,8 @@ function checkForValidMail() {
     }
 }
 
-function setLanguage() {
-    fetch("./language/de.json")
+function setLanguage(language) {
+    fetch("./language/" + language + ".json")
     .then(function(response) {
         return response.json();
     })
@@ -250,6 +251,13 @@ function setLanguage() {
         setTextInTag(".lang-changelanguage", data.changelanguage);
         setTextInTag(".lang-iconsprovidedby", data.iconsprovidedby);
     });
+    if(language == "de") {
+        document.querySelector(".language-button img").src = "svg/flag-usa.svg";
+        inactiveLanguage = "en";
+    } else if (language == "en") {
+        document.querySelector(".language-button img").src = "svg/flag-germany.svg";
+        inactiveLanguage = "de";
+    }
 }
 
 function setTextInTag(target, text) {
