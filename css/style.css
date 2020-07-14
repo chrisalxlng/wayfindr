@@ -85,14 +85,6 @@ p {
   text-decoration: line-through;
 }
 
-.fas.watermark-icon {
-  display: none;
-}
-
-.right-column {
-  display: none;
-}
-
 .section-header {
   position: relative;
   height: 60px;
@@ -251,6 +243,14 @@ nav .nav-ul li .nav-link.main-cta {
   margin-top: 30px;
   color: #416FD6;
   background-color: white;
+}
+
+#hero-section .left-column .fas.watermark-icon {
+  display: none;
+}
+
+#hero-section .right-column {
+  display: none;
 }
 
 #features-section .features-grid .features-grid-element {
@@ -705,5 +705,232 @@ footer .lower-section .button img {
 
 footer .lower-section .button p {
   font-size: 10px;
+}
+
+@media (min-width: 900px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .section-padding {
+    padding: 80px 100px;
+  }
+  .section-padding-y {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .section-padding-x {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .section-header .section-heading {
+    bottom: 8px;
+    left: 100px;
+  }
+  .section-header .section-watermark-heading {
+    left: 60px;
+  }
+  nav {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  nav .navbar {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: transparent;
+  }
+  nav .navbar .logo {
+    color: #416FD6;
+  }
+  nav .navbar .cta-hamburger-container {
+    display: none;
+  }
+  nav .nav-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: transparent;
+    border-bottom: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  nav .nav-ul li .nav-link {
+    border: none;
+    padding: 8px 15px;
+    font-weight: 400;
+    font-size: 13px;
+  }
+  nav .nav-ul li .nav-link.main-cta {
+    background-color: #416FD6;
+    color: white;
+    border: 1px white solid;
+  }
+  #hero-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #hero-section .left-column {
+    position: relative;
+    text-align: left;
+    background-color: rgba(65, 111, 214, 0.03);
+    color: black;
+    width: 50%;
+    margin-top: 0px;
+    padding-top: 120px;
+  }
+  #hero-section .left-column img {
+    display: none;
+  }
+  #hero-section .left-column a {
+    margin-top: 100px;
+    color: white;
+    background-color: #416FD6;
+  }
+  #hero-section .left-column .fas.watermark-icon {
+    display: block;
+    position: absolute;
+    color: rgba(65, 111, 214, 0.1);
+  }
+  #hero-section .left-column .fa-location-arrow {
+    bottom: 25px;
+    left: 80px;
+    font-size: 30px;
+  }
+  #hero-section .left-column .fa-map-marker-alt {
+    bottom: 170px;
+    right: 150px;
+    font-size: 38px;
+  }
+  #hero-section .left-column .fa-compass {
+    top: 170px;
+    left: 40px;
+    font-size: 30px;
+  }
+  #hero-section .left-column .fa-map-pin {
+    top: 90px;
+    right: 70px;
+    font-size: 38px;
+  }
+  #hero-section .right-column {
+    width: 50%;
+    display: block;
+    background-color: #416FD6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0px;
+    padding-top: 120px;
+  }
+  #hero-section .right-column img {
+    height: 300px;
+    width: 100%;
+  }
+  #features-section .features-grid .features-grid-element {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 50px;
+  }
+  #features-section .features-grid .features-grid-element .features-svg-container {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #features-section .features-grid .features-grid-element .features-svg-container.float-right {
+    top: 0px;
+    margin-right: 0px;
+  }
+  #features-section .features-grid .features-grid-element .features-svg-container.float-left {
+    top: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #features-section .features-grid .features-grid-element .features-svg-container img {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  #features-section .features-grid .features-grid-element .features-text-container {
+    padding: 70px 100px;
+    width: 50%;
+  }
+  #features-section .features-grid .features-grid-element .features-text-container h3 {
+    width: 100%;
+  }
+  #pricing-section .pricing-cards-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    padding-left: calc(100px - 25px);
+    padding-right: calc(100px - 25px);
+  }
+  #pricing-section .pricing-cards-container::before {
+    display: none;
+  }
+  #pricing-section .pricing-cards-container::after {
+    display: none;
+  }
+  #pricing-section .pricing-cards-container .pricing-card {
+    min-width: auto;
+    max-width: 270px;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  #pricing-section .pricing-cards-container .pricing-card.spotlight {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  #pricing-section .dot-con-wrapper {
+    display: none;
+  }
+  #signup-section .signup-section-content form {
+    width: 600px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #signup-section .signup-section-content form label {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  #signup-section .signup-section-content form .input-submit-container .signup-button {
+    width: 35%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

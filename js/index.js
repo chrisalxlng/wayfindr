@@ -1,3 +1,13 @@
+//------------MEDIA QUERIES------------
+var minWidth900 = window.innerWidth >= 900;
+window.onresize = function() {
+    minWidth900 = window.innerWidth >= 900;
+    console.log(window.innerWidth >= 900);
+}
+
+
+
+
 //------------GLOBAL VARIABLES------------
 var isDropdownNavOpen = false;
 var signupButtonStatic = true;
@@ -87,7 +97,7 @@ function addEventListernersToButtons(button, target, isNavLink, hasIcon) {
         animateButtonPressed(animTargets, 0.95);
 
         scrollTo(target);
-        if (isNavLink) {
+        if (isNavLink && !minWidth900) {
             toggleDropdownNav();
         }
     });
@@ -115,7 +125,8 @@ var scroll = function () {
     fadeIn("#feature-3", 200);
     animatePricingSection();
     animateSignupSection();
-    closeDropdownNav()
+    closeDropdownNav();
+    makeNavFixed();
 };
 var waiting = false;
 window.onscroll = function() {
@@ -374,7 +385,7 @@ function animateHeroSection() {
         opacity: [0, 1],
     }, "-=300")
     .add({
-        targets: ["#hero-left-column img", "#hero-left-column a"],
+        targets: ["#hero-left-column img", "#hero-left-column a", "#hero-right-column img"],
         translateY: [10, 0],
         opacity: [0, 1],
     }, "-=200")
@@ -545,4 +556,21 @@ function animateSignupForInvalidMail(button, buttonText, buttonIcon, inputField)
         targets: [buttonText, buttonIcon],
         translateX: [-30, 0],
     })
+}
+
+
+//------------DESKTOP FUNCTIONS------------
+function makeNavFixed() {
+    var nav = document.querySelector("nav").style;
+    var logo = document.querySelector(".logo").style;
+
+    if (minWidth900 && window.scrollY > 50) {
+        nav.position = "fixed";
+        nav.backgroundColor = "#416FD6";
+        logo.color = "white";
+    } else if (minWidth900 && window.scrollY < 50) {
+        nav.position = "absolute";
+        nav.backgroundColor = "transparent";
+        logo.color = "#416FD6";
+    }
 }

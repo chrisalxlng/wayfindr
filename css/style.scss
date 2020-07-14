@@ -75,14 +75,6 @@ p {
     text-decoration: line-through;
 }
 
-.fas.watermark-icon {
-    display: none;
-}
-
-.right-column {
-    display: none;
-}
-
 .section-header {
     position: relative;
     height: 60px;
@@ -216,6 +208,14 @@ nav {
             color: $main-color;
             background-color: white;
         }
+
+        .fas.watermark-icon {
+            display: none;
+        }
+    }
+
+    .right-column {
+        display: none;
     }
 }
 
@@ -615,3 +615,256 @@ footer {
     }
 }
 
+@media (min-width: 900px) {
+    h1 {
+        font-size: 40px;
+    }
+    
+    h2 {
+        font-size: 30px;
+    }
+    
+    p {
+        font-size: 16px;
+    } 
+
+    .section-padding {
+        padding: 80px 100px;
+    }
+    
+    .section-padding-y {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    .section-padding-x {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .section-header {
+    
+        .section-heading {
+            bottom: 8px;
+            left: 100px;
+        }
+    
+        .section-watermark-heading {
+            left: 60px;
+        }
+    }
+
+    nav {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: .5s;
+    
+        .navbar {
+            width: fit-content;
+            background-color: transparent;
+        
+            .logo {
+                color: $main-color;
+            }
+        
+            .cta-hamburger-container {
+                display: none;
+            }
+        }
+    
+        .nav-ul {
+            display: flex;
+            background-color: transparent;
+            border-bottom: none;
+            padding-top: 3px;
+            padding-bottom: 3px;
+    
+            li {
+                
+                .nav-link {
+                    border: none;
+                    padding: 8px 15px;
+                    font-weight: 400;
+                    font-size: 13px;
+    
+                    &.main-cta {
+                        background-color: $main-color;
+                        color: white;
+                        border: 1px white solid;
+                    }
+                }
+            }
+        }
+    }
+
+    #hero-section {
+        display: flex;
+
+        .left-column {
+            position: relative;
+            text-align: left;
+            background-color: rgba($main-color, $alpha: 0.03);
+            color: black;
+            width: 50%;
+            margin-top: 0px;
+            padding-top: 120px;
+    
+            img {
+                display: none;
+            }
+    
+            a {
+                margin-top: 100px;
+                color: white;
+                background-color: $main-color;
+            }
+
+            .fas.watermark-icon {
+                display: block;
+                position: absolute;
+                color: rgba($main-color, $alpha: 0.1);
+            }
+
+            .fa-location-arrow {
+                bottom: 25px;
+                left: 80px;
+                font-size: 30px;
+            }
+
+            .fa-map-marker-alt {
+                bottom: 170px;
+                right: 150px;
+                font-size: 38px;
+            }
+
+            .fa-compass {
+                top: 170px;
+                left: 40px;
+                font-size: 30px;
+            }
+
+            .fa-map-pin {
+                top: 90px;
+                right: 70px;
+                font-size: 38px;
+            }
+        }
+
+        .right-column {
+            width: 50%;
+            display: block;
+            background-color: $main-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0px;
+            padding-top: 120px;
+
+            img {
+                height: 300px;
+                width: 100%;
+            }
+        }
+    }
+
+    #features-section {
+        .features-grid {
+    
+            .features-grid-element {
+                display: flex;
+                margin-top: 50px;
+                
+                
+                .features-svg-container {
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    &.float-right {
+                        top: 0px;
+                        margin-right: 0px;
+                    }
+    
+                    &.float-left {
+                        top: 0px;
+                        margin-left: 0px;
+                        margin-top: 0px;
+                        order: 1;
+                    }
+    
+                    img {
+                        transform: scale(1.5);
+                    }
+                }
+    
+                .features-text-container {   
+                    padding: 70px 100px;
+                    width: 50%;
+    
+                    h3 {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    #pricing-section {
+
+        .pricing-cards-container {
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding-left: calc(100px - 25px);
+            padding-right: calc(100px - 25px);
+    
+            &::before {
+                display: none;
+            }
+    
+            &::after {
+                display: none;
+            }
+    
+            .pricing-card {
+                min-width: auto;
+                max-width: 270px;
+                margin-right: 25px;
+                margin-left: 25px;
+    
+                &.spotlight {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    
+        .dot-con-wrapper {
+            display: none;
+        }
+    }
+
+    #signup-section {
+    
+        .signup-section-content {
+    
+            form {
+                width: 600px;
+                align-items: center;
+    
+                label {
+                    align-self: flex-start;
+                }
+    
+                .input-submit-container {
+    
+                    .signup-button {
+                        width: 35%;
+                    }
+                }
+            }
+        }
+    }
+}
