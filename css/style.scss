@@ -625,7 +625,7 @@ footer {
     }
     
     p {
-        font-size: 16px;
+        font-size: 15px;
     } 
 
     .section-padding {
@@ -690,7 +690,7 @@ footer {
                     font-size: 13px;
     
                     &.main-cta {
-                        background-color: $main-color;
+                        background-color: transparent;
                         color: white;
                         border: 1px white solid;
                     }
@@ -818,8 +818,8 @@ footer {
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            padding-left: calc(100px - 25px);
-            padding-right: calc(100px - 25px);
+            padding-left: calc(100px - 50px);
+            padding-right: calc(100px - 50px);
     
             &::before {
                 display: none;
@@ -831,9 +831,9 @@ footer {
     
             .pricing-card {
                 min-width: auto;
-                max-width: 270px;
-                margin-right: 25px;
-                margin-left: 25px;
+                max-width: 230px;
+                margin-right: 50px;
+                margin-left: 50px;
     
                 &.spotlight {
                     transform: scale(1.1);
@@ -859,9 +859,34 @@ footer {
                 }
     
                 .input-submit-container {
+
+                    .mail-input {
+                        height: 40px;
+                        font-size: 14px;
+                    }
     
                     .signup-button {
                         width: 35%;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+    
+        .upper-section {
+    
+            .footer-section-heading {
+                font-size: 14px;
+            }
+    
+            .footer-list-container {
+    
+                li {
+    
+                    a {
+                        font-size: 12px;
                     }
                 }
             }

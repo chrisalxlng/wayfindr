@@ -715,7 +715,7 @@ footer .lower-section .button p {
     font-size: 30px;
   }
   p {
-    font-size: 16px;
+    font-size: 15px;
   }
   .section-padding {
     padding: 80px 100px;
@@ -777,7 +777,7 @@ footer .lower-section .button p {
     font-size: 13px;
   }
   nav .nav-ul li .nav-link.main-cta {
-    background-color: #416FD6;
+    background-color: transparent;
     color: white;
     border: 1px white solid;
   }
@@ -897,8 +897,8 @@ footer .lower-section .button p {
         -ms-flex-align: center;
             align-items: center;
     overflow: hidden;
-    padding-left: calc(100px - 25px);
-    padding-right: calc(100px - 25px);
+    padding-left: calc(100px - 50px);
+    padding-right: calc(100px - 50px);
   }
   #pricing-section .pricing-cards-container::before {
     display: none;
@@ -908,9 +908,9 @@ footer .lower-section .button p {
   }
   #pricing-section .pricing-cards-container .pricing-card {
     min-width: auto;
-    max-width: 270px;
-    margin-right: 25px;
-    margin-left: 25px;
+    max-width: 230px;
+    margin-right: 50px;
+    margin-left: 50px;
   }
   #pricing-section .pricing-cards-container .pricing-card.spotlight {
     -webkit-transform: scale(1.1);
@@ -929,8 +929,18 @@ footer .lower-section .button p {
     -ms-flex-item-align: start;
         align-self: flex-start;
   }
+  #signup-section .signup-section-content form .input-submit-container .mail-input {
+    height: 40px;
+    font-size: 14px;
+  }
   #signup-section .signup-section-content form .input-submit-container .signup-button {
     width: 35%;
+  }
+  footer .upper-section .footer-section-heading {
+    font-size: 14px;
+  }
+  footer .upper-section .footer-list-container li a {
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=style.css.map */

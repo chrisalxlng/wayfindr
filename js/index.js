@@ -2,7 +2,6 @@
 var minWidth900 = window.innerWidth >= 900;
 window.onresize = function() {
     minWidth900 = window.innerWidth >= 900;
-    console.log(window.innerWidth >= 900);
 }
 
 
@@ -99,6 +98,8 @@ function addEventListernersToButtons(button, target, isNavLink, hasIcon) {
         scrollTo(target);
         if (isNavLink && !minWidth900) {
             toggleDropdownNav();
+        } else if(isNavLink && minWidth900) {
+            toggleNavFixed();
         }
     });
 }
@@ -126,7 +127,7 @@ var scroll = function () {
     animatePricingSection();
     animateSignupSection();
     closeDropdownNav();
-    makeNavFixed();
+    toggleNavFixed();
 };
 var waiting = false;
 window.onscroll = function() {
@@ -282,11 +283,13 @@ function setTextInTag(target, text) {
 //------------ANIMATION FUNCTIONS------------
 function scrollTo(target) {
     var elementSelector = document.querySelector(target);
+    var adjustmentValue = 45;
+    if(minWidth900) adjustmentValue = 15;
 
     const elementOffset = elementSelector.getBoundingClientRect().top;
     const scrollPosition = window.scrollY;
     const documentTop = document.documentElement.clientTop;
-    const scrollOffset = elementOffset + scrollPosition - documentTop - 45;
+    const scrollOffset = elementOffset + scrollPosition - documentTop - adjustmentValue;
 
     if(scrollPosition != scrollOffset) {
         anime({
@@ -560,17 +563,24 @@ function animateSignupForInvalidMail(button, buttonText, buttonIcon, inputField)
 
 
 //------------DESKTOP FUNCTIONS------------
-function makeNavFixed() {
+function toggleNavFixed() {
     var nav = document.querySelector("nav").style;
     var logo = document.querySelector(".logo").style;
 
-    if (minWidth900 && window.scrollY > 50) {
-        nav.position = "fixed";
-        nav.backgroundColor = "#416FD6";
-        logo.color = "white";
-    } else if (minWidth900 && window.scrollY < 50) {
-        nav.position = "absolute";
-        nav.backgroundColor = "transparent";
-        logo.color = "#416FD6";
-    }
+    setTimeout(function () {
+        if (minWidth900 && window.scrollY > 50) {
+            nav.position = "fixed";
+            nav.backgroundColor = "#416FD6";
+            //nav.borderBottom = "1px #5278cc solid";
+            nav.boxShadow = "0 0 2px 0";
+            logo.color = "white";
+        } else if (minWidth900 && window.scrollY < 50) {
+            nav.backgroundColor = "transparent";
+            logo.color = "#416FD6";
+            nav.position = "absolute";
+            //nav.borderBottom = "none";
+            nav.boxShadow = "0 0 0 0";
+        }     
+    }, 500);
+    
 }
