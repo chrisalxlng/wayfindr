@@ -73,7 +73,7 @@ h2 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .button {
@@ -269,7 +269,7 @@ nav .nav-ul li .nav-link.main-cta {
   background-color: #416FD6;
   color: #f8f8f8;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 #hero-section .left-column p {
@@ -283,7 +283,7 @@ nav .nav-ul li .nav-link.main-cta {
 }
 
 #hero-section .left-column a {
-  margin-top: 20px;
+  margin-top: 15px;
   color: #416FD6;
   background-color: #f8f8f8;
 }
