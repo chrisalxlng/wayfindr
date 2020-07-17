@@ -532,6 +532,10 @@ footer {
                     color: white;
                     font-size: 13px;
                     font-weight: 300;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -548,6 +552,10 @@ footer {
             .fab {
                 color: #16284B;
                 font-size: 30px;
+
+                &:hover {
+                    color: #2a406d;
+                }
             }    
         }
 
@@ -577,6 +585,10 @@ footer {
 
                 a {
                     color: white;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
 
                 .span {
@@ -590,6 +602,10 @@ footer {
                 
                 a {
                     color: white;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
     
@@ -659,7 +675,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        transition: .8s;
+        transition: .5s;
     
         .navbar {
             width: fit-content;
@@ -831,7 +847,7 @@ footer {
     
             .pricing-card {
                 min-width: auto;
-                max-width: 230px;
+                max-width: 250px;
                 margin-right: 50px;
                 margin-left: 50px;
     

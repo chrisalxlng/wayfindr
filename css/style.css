@@ -624,6 +624,10 @@ footer .upper-section .footer-list-container li a {
   font-weight: 300;
 }
 
+footer .upper-section .footer-list-container li a:hover {
+  text-decoration: underline;
+}
+
 footer .upper-section .social-media-section ul {
   display: -ms-grid;
   display: grid;
@@ -636,6 +640,10 @@ footer .upper-section .social-media-section ul {
 footer .upper-section .social-media-section .fab {
   color: #16284B;
   font-size: 30px;
+}
+
+footer .upper-section .social-media-section .fab:hover {
+  color: #2a406d;
 }
 
 footer .upper-section .link-section {
@@ -675,6 +683,10 @@ footer .lower-section .links-copyright-container .lower-footer-links a {
   color: white;
 }
 
+footer .lower-section .links-copyright-container .lower-footer-links a:hover {
+  text-decoration: underline;
+}
+
 footer .lower-section .links-copyright-container .lower-footer-links .span {
   margin-left: 3px;
   margin-right: 3px;
@@ -686,6 +698,10 @@ footer .lower-section .links-copyright-container .icons-copyright {
 
 footer .lower-section .links-copyright-container .icons-copyright a {
   color: white;
+}
+
+footer .lower-section .links-copyright-container .icons-copyright a:hover {
+  text-decoration: underline;
 }
 
 footer .lower-section .links-copyright-container .copyright {
@@ -746,8 +762,8 @@ footer .lower-section .button p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-transition: .8s;
-    transition: .8s;
+    -webkit-transition: .5s;
+    transition: .5s;
   }
   nav .navbar {
     width: -webkit-fit-content;
@@ -908,7 +924,7 @@ footer .lower-section .button p {
   }
   #pricing-section .pricing-cards-container .pricing-card {
     min-width: auto;
-    max-width: 230px;
+    max-width: 250px;
     margin-right: 50px;
     margin-left: 50px;
   }
