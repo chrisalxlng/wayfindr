@@ -746,8 +746,8 @@ footer .lower-section .button p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-transition: .5s;
-    transition: .5s;
+    -webkit-transition: .8s;
+    transition: .8s;
   }
   nav .navbar {
     width: -webkit-fit-content;

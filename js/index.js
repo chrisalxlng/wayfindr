@@ -1,9 +1,23 @@
 //------------MEDIA QUERIES------------
 var minWidth900 = window.innerWidth >= 900;
+
+var resize = function () {
+    scrollPricingContainerToCard(2, false);
+};
+var waiting2 = false;
 window.onresize = function() {
     minWidth900 = window.innerWidth >= 900;
-}
+    if (waiting2) {
+        return;
+    }
+    waiting2 = true;
 
+    resize();
+
+    setTimeout(function () {
+        waiting2 = false;
+    }, 100);
+};
 
 
 
@@ -571,16 +585,14 @@ function toggleNavFixed() {
         if (minWidth900 && window.scrollY > 50) {
             nav.position = "fixed";
             nav.backgroundColor = "#416FD6";
-            //nav.borderBottom = "1px #5278cc solid";
-            nav.boxShadow = "0 0 2px 0";
+            nav.boxShadow = "0 0 1px 1px rgba(0, 0, 0, 0.2)";
             logo.color = "white";
         } else if (minWidth900 && window.scrollY < 50) {
             nav.backgroundColor = "transparent";
             logo.color = "#416FD6";
+            nav.boxShadow = "0 0 0 0 transparent";
             nav.position = "absolute";
-            //nav.borderBottom = "none";
-            nav.boxShadow = "0 0 0 0";
-        }     
+        } else if (!minWidth900) nav.boxShadow = "0 0 0 0";
     }, 500);
     
 }
