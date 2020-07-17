@@ -10,7 +10,6 @@ window.addEventListener("load", function () {
 var minWidth900 = window.innerWidth >= 900;
 
 var resize = function () {
-    scrollPricingContainerToCard(2, false);
     toggleNavFixed();
 };
 var waiting2 = false;

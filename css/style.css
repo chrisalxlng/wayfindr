@@ -12,6 +12,12 @@ body {
   background-color: #f8f8f8;
 }
 
+input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 *:focus {
   outline: none;
 }
