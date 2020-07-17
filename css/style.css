@@ -16,6 +16,35 @@ body {
   outline: none;
 }
 
+.loader {
+  position: fixed;
+  z-index: 200;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.hidden {
+  -webkit-animation: loader .2s;
+          animation: loader .2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes loader {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 ul {
   list-style: none;
   -webkit-padding-start: 0px;

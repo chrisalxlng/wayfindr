@@ -21,6 +21,26 @@ body {
     outline: none;
 }
 
+.loader {
+    position: fixed;
+    z-index: 200;
+    width: 100vw;
+    height: 100vh;
+    background-color: $off-white;
+  }
+
+  .hidden {
+    animation: loader .2s;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes loader {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 ul {
     list-style: none;
     padding-inline-start: 0px;

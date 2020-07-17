@@ -1,8 +1,17 @@
+//------------PAGE LOADER------------
+window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+    loader.className += " hidden"; // class "loader hidden"
+});
+
+
+
 //------------MEDIA QUERIES------------
 var minWidth900 = window.innerWidth >= 900;
 
 var resize = function () {
     scrollPricingContainerToCard(2, false);
+    toggleNavFixed();
 };
 var waiting2 = false;
 window.onresize = function() {
@@ -378,7 +387,7 @@ function animateCloseNavToggle() {
         targets: "#nav-dropdown",
         translateY: [0, -20],
         opacity: [1, 0],
-        complete: function(anim) {
+        complete: function() {
             document.querySelector("#nav-dropdown").style.display = "none";
         }
     }, "-=200");
@@ -586,13 +595,16 @@ function toggleNavFixed() {
             nav.position = "fixed";
             nav.backgroundColor = "#416FD6";
             nav.boxShadow = "0 0 1px 1px rgba(0, 0, 0, 0.2)";
-            logo.color = "white";
+            logo.color = "#f8f8f8";
         } else if (minWidth900 && window.scrollY < 50) {
             nav.backgroundColor = "transparent";
             logo.color = "#416FD6";
             nav.boxShadow = "0 0 0 0 transparent";
             nav.position = "absolute";
-        } else if (!minWidth900) nav.boxShadow = "0 0 0 0";
+        } else if (!minWidth900) {
+            nav.boxShadow = "0 0 0 0";
+            logo.color = "#f8f8f8";
+            nav.position = "fixed";
+        }
     }, 500);
-    
 }
