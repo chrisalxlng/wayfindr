@@ -644,7 +644,143 @@ footer {
     }
 }
 
+@media (min-width: 450px) {
+    #pricing-section {
+
+        .pricing-cards-container {
+    
+            &::before {
+                content: "";
+                flex: 0 0 25vw;
+            }
+    
+            &::after {
+                content: "";
+                flex: 0 0 calc(25vw - 30px);
+            }
+    
+            .pricing-card {
+                min-width: 50vw;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 550px) {
+    #pricing-section {
+
+        .pricing-cards-container {
+    
+            &::before {
+                content: "";
+                flex: 0 0 30vw;
+            }
+    
+            &::after {
+                content: "";
+                flex: 0 0 calc(30vw - 30px);
+            }
+    
+            .pricing-card {
+                min-width: 40vw;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    #pricing-section {
+
+        .pricing-cards-container {
+    
+            &::before {
+                content: "";
+                flex: 0 0 37.5vw;
+            }
+    
+            &::after {
+                content: "";
+                flex: 0 0 calc(37.5vw - 30px);
+            }
+    
+            .pricing-card {
+                min-width: 35vw;
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    #pricing-section {
+
+        .pricing-cards-container {
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding-left: calc(100px - 85px);
+            padding-right: calc(100px - 85px);
+    
+            &::before {
+                display: none;
+            }
+    
+            &::after {
+                display: none;
+            }
+    
+            .pricing-card {
+                min-width: auto;
+                max-width: 250px;
+                margin-right: 15px;
+                margin-left: 15px;
+    
+                &.spotlight {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    
+        .dot-con-wrapper {
+            display: none;
+        }
+    }
+
+    #signup-section {
+    
+        .signup-section-content {
+    
+            form {
+                width: 600px;
+                align-items: center;
+    
+                label {
+                    align-self: flex-start;
+                }
+    
+                .input-submit-container {
+
+                    .mail-input {
+                        height: 40px;
+                        font-size: 14px;
+                    }
+    
+                    .signup-button {
+                        width: 35%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: 900px) {
+    $padding-x: 50px;
+    $padding-y: 60px;
+    $pricing-card-margin-x: 20px;
+
     h1 {
         font-size: 40px;
     }
@@ -658,28 +794,28 @@ footer {
     } 
 
     .section-padding {
-        padding: 80px 100px;
+        padding: calc(#{$padding-y} + 20px) $padding-x;
     }
     
     .section-padding-y {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: $padding-y;
+        padding-bottom: $padding-y;
     }
     
     .section-padding-x {
-        padding-left: 100px;
-        padding-right: 100px;
+        padding-left: $padding-x;
+        padding-right: $padding-x;
     }
 
     .section-header {
     
         .section-heading {
             bottom: 8px;
-            left: 100px;
+            left: $padding-x;
         }
     
         .section-watermark-heading {
-            left: 60px;
+            left: calc(#{$padding-x} - 30px);
         }
     }
 
@@ -830,7 +966,7 @@ footer {
                 }
     
                 .features-text-container {   
-                    padding: 70px 100px;
+                    padding: $padding-x $padding-x;
                     width: 50%;
     
                     h3 {
@@ -847,8 +983,8 @@ footer {
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            padding-left: calc(100px - 50px);
-            padding-right: calc(100px - 50px);
+            padding-left: calc(#{$padding-x} - #{$pricing-card-margin-x});
+            padding-right: calc(#{$padding-x} - #{$pricing-card-margin-x});
     
             &::before {
                 display: none;
@@ -861,8 +997,8 @@ footer {
             .pricing-card {
                 min-width: auto;
                 max-width: 250px;
-                margin-right: 50px;
-                margin-left: 50px;
+                margin-right: $pricing-card-margin-x;
+                margin-left: $pricing-card-margin-x;
     
                 &.spotlight {
                     transform: scale(1.1);
@@ -872,33 +1008,6 @@ footer {
     
         .dot-con-wrapper {
             display: none;
-        }
-    }
-
-    #signup-section {
-    
-        .signup-section-content {
-    
-            form {
-                width: 600px;
-                align-items: center;
-    
-                label {
-                    align-self: flex-start;
-                }
-    
-                .input-submit-container {
-
-                    .mail-input {
-                        height: 40px;
-                        font-size: 14px;
-                    }
-    
-                    .signup-button {
-                        width: 35%;
-                    }
-                }
-            }
         }
     }
 
@@ -918,6 +1027,211 @@ footer {
                         font-size: 12px;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (min-width: 1100px) {
+    $padding-x: 100px;
+    $padding-y: 60px;
+    $pricing-card-margin-x: 20px;
+
+    .section-padding {
+        padding: calc(#{$padding-y} + 20px) $padding-x;
+    }
+    
+    .section-padding-y {
+        padding-top: $padding-y;
+        padding-bottom: $padding-y;
+    }
+    
+    .section-padding-x {
+        padding-left: $padding-x;
+        padding-right: $padding-x;
+    }
+
+    .section-header {
+    
+        .section-heading {
+            bottom: 8px;
+            left: $padding-x;
+        }
+    
+        .section-watermark-heading {
+            left: calc(#{$padding-x} - 40px);
+        }
+    }
+
+    #features-section {
+        .features-grid {
+    
+            .features-grid-element {
+    
+                .features-text-container {   
+                    padding: calc(#{$padding-x} - 30px) calc(#{$padding-x} - 30px);
+                }
+            }
+        }
+    }
+
+    #pricing-section {
+
+        .pricing-cards-container {
+            padding-left: calc(#{$padding-x} - #{$pricing-card-margin-x});
+            padding-right: calc(#{$padding-x} - #{$pricing-card-margin-x});
+    
+            .pricing-card {
+                margin-right: $pricing-card-margin-x;
+                margin-left: $pricing-card-margin-x;
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    $padding-x: 150px;
+    $padding-y: 80px;
+    $pricing-card-margin-x: 20px;
+
+    .section-padding {
+        padding: calc(#{$padding-y} + 20px) $padding-x;
+    }
+    
+    .section-padding-y {
+        padding-top: $padding-y;
+        padding-bottom: $padding-y;
+    }
+    
+    .section-padding-x {
+        padding-left: $padding-x;
+        padding-right: $padding-x;
+    }
+
+    .section-header {
+    
+        .section-heading {
+            bottom: 8px;
+            left: $padding-x;
+        }
+    
+        .section-watermark-heading {
+            left: calc(#{$padding-x} - 40px);
+        }
+    }
+
+    #features-section {
+        .features-grid {
+
+            .features-grid-element {
+                justify-content: center;
+    
+                .features-text-container {   
+                    padding: calc(#{$padding-x} - 60px) calc(#{$padding-x} - 60px);
+                    width: calc(50% - #{$padding-x});
+
+                    &.float-right {
+                        border-radius: 10px;
+                        float: none;
+                    }
+    
+                    &.float-left {
+                        border-radius: 10px;
+                        float: none;
+                        
+                    }
+                }
+
+                .features-svg-container {
+                    width: calc(50% - #{$padding-x});
+                }
+            }
+        }
+    }
+
+    #pricing-section {
+
+        .pricing-cards-container {
+            padding-left: calc(#{$padding-x} - #{$pricing-card-margin-x});
+            padding-right: calc(#{$padding-x} - #{$pricing-card-margin-x});
+    
+            .pricing-card {
+                margin-right: $pricing-card-margin-x;
+                margin-left: $pricing-card-margin-x;
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    $padding-x: 200px;
+    $padding-y: 110px;
+    $pricing-card-margin-x: 60px;
+
+    .section-padding {
+        padding: calc(#{$padding-y} + 20px) $padding-x;
+    }
+    
+    .section-padding-y {
+        padding-top: $padding-y;
+        padding-bottom: $padding-y;
+    }
+    
+    .section-padding-x {
+        padding-left: $padding-x;
+        padding-right: $padding-x;
+    }
+
+    .section-header {
+    
+        .section-heading {
+            bottom: 8px;
+            left: $padding-x;
+        }
+    
+        .section-watermark-heading {
+            left: calc(#{$padding-x} - 40px);
+        }
+    }
+
+    #features-section {
+        .features-grid {
+
+            .features-grid-element {
+                justify-content: center;
+    
+                .features-text-container {   
+                    padding: calc(#{$padding-x} - 100px) calc(#{$padding-x} - 100px);
+                    width: calc(50% - #{$padding-x});
+
+                    &.float-right {
+                        border-radius: 10px;
+                        float: none;
+                    }
+    
+                    &.float-left {
+                        border-radius: 10px;
+                        float: none;
+                        
+                    }
+                }
+
+                .features-svg-container {
+                    width: calc(50% - #{$padding-x});
+                }
+            }
+        }
+    }
+
+    #pricing-section {
+
+        .pricing-cards-container {
+            padding-left: calc(#{$padding-x} - #{$pricing-card-margin-x});
+            padding-right: calc(#{$padding-x} - #{$pricing-card-margin-x});
+    
+            .pricing-card {
+                margin-right: $pricing-card-margin-x;
+                margin-left: $pricing-card-margin-x;
             }
         }
     }
