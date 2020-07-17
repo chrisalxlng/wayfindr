@@ -21,6 +21,15 @@ body {
     outline: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 60px #fafafa inset !important;
+    background-color: #fafafa !important;
+    background-clip: content-box !important;
+}
+
 .loader {
     position: fixed;
     z-index: 200;
@@ -221,17 +230,17 @@ nav {
         margin-top: 40px;
 
         p {
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         img {
             height: 300px;
             width: 100%;
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         a {
-            margin-top: 30px;
+            margin-top: 20px;
             color: $main-color;
             background-color: $off-white;
         }

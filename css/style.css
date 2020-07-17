@@ -16,6 +16,15 @@ body {
   outline: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 60px #fafafa inset !important;
+  background-color: #fafafa !important;
+  background-clip: content-box !important;
+}
+
 .loader {
   position: fixed;
   z-index: 200;
@@ -264,17 +273,17 @@ nav .nav-ul li .nav-link.main-cta {
 }
 
 #hero-section .left-column p {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 #hero-section .left-column img {
   height: 300px;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 #hero-section .left-column a {
-  margin-top: 30px;
+  margin-top: 20px;
   color: #416FD6;
   background-color: #f8f8f8;
 }
