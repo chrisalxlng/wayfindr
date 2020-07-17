@@ -2,6 +2,8 @@
 
 $main-color: #416FD6;
 $secondary-color: #C6C6FF;
+$off-black: rgba($color: #000000, $alpha: 0.85);
+$off-white: #f8f8f8;
 $main-font: Montserrat, sant-serif;
 
 * {
@@ -9,6 +11,10 @@ $main-font: Montserrat, sant-serif;
     box-sizing: border-box;
     font-family: $main-font;
     overflow-x: hidden;
+}
+
+body {
+    background-color: $off-white;
 }
 
 *:focus {
@@ -83,6 +89,7 @@ p {
         position: absolute;
         bottom: 10px;
         left: 30px;
+        color: $off-black;
     }
 
     .section-watermark-heading {
@@ -105,14 +112,14 @@ nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: white;
+        color: $off-white;
         height: 50px;
         background-color: $main-color;
     
         .logo {
             display: flex;
             align-items: center;
-            color: white;
+            color: $off-white;
             cursor: pointer;
     
             i {
@@ -125,11 +132,11 @@ nav {
             align-items: center;
     
             a {
-                border: 1px white solid;
+                border: 1px $off-white solid;
                 border-radius: 5px;
                 padding: 5px 10px;
                 font-size: 10px;
-                color: white;
+                color: $off-white;
                 cursor: pointer;
                 user-select: none;
     
@@ -160,9 +167,9 @@ nav {
 
             .nav-link {
                 display: block;
-                color: white;
+                color: $off-white;
                 width: 100%;
-                border: 1px white solid;
+                border: 1px $off-white solid;
                 border-radius: 5px;
                 padding: 10px;
                 text-align: center;
@@ -174,7 +181,7 @@ nav {
                 }
 
                 &.main-cta {
-                    background-color: white;
+                    background-color: $off-white;
                     color: $main-color;
                 }
             }
@@ -189,7 +196,7 @@ nav {
         justify-content: center;
         text-align: center;
         background-color: $main-color;
-        color: white;
+        color: $off-white;
         width: 100%;
         margin-top: 40px;
 
@@ -206,7 +213,7 @@ nav {
         a {
             margin-top: 30px;
             color: $main-color;
-            background-color: white;
+            background-color: $off-white;
         }
 
         .fas.watermark-icon {
@@ -249,6 +256,7 @@ nav {
 
             .features-text-container {   
                 background-color: rgba($color: $secondary-color, $alpha: 0.5);
+                color: $off-black;
                 padding: 30px;
                 width: calc(100vw - 30px);
 
@@ -321,19 +329,21 @@ nav {
                 justify-content: center;
                 align-items: center;
                 font-weight: 700;
+                color: $off-black;
                 
                 p {
                     font-size: 18px;
                 }
 
                 &.spotlight {
-                    color: white;
+                    color: $off-white;
                 }
             }
 
             .pricing-card-content {
                 padding: 20px;
-                background-color: white;
+                background-color: $off-white;
+                color: $off-black;
 
                 .pricing-card-price {
                     text-align: center;
@@ -428,6 +438,7 @@ nav {
             opacity: 0;
             font-size: 18px;
             font-weight: 500;
+            color: $off-black;
 
             .span {
                 color: $main-color;
@@ -446,6 +457,7 @@ nav {
                 font-size: 13px;
                 font-weight: 500;
                 margin-bottom: 5px;
+                color: $off-black;
             }
 
             .invalid-mail-prompt {
@@ -460,7 +472,7 @@ nav {
                 display: none;
                 padding: 5px 20px;
                 font-size: 11px;
-                color: white;
+                color: $off-white;
             }
 
             .input-submit-container {
@@ -476,6 +488,7 @@ nav {
                     border-radius: 5px;
                     height: 35px;
                     padding: 10px;
+                    background-color: $off-white;
 
                     &:focus {
                         border: 2px $main-color solid;
@@ -484,7 +497,7 @@ nav {
 
                 .signup-button {
                     border: none;
-                    color: white;
+                    color: $off-white;
                     font-size: 16px;
 
                     .done-text {
@@ -518,7 +531,7 @@ footer {
         margin-bottom: 20px;
 
         .footer-section-heading {
-            color: white;
+            color: $off-white;
             font-weight: 500;
             font-size: 16px;
         }
@@ -529,7 +542,7 @@ footer {
                 margin-top: 3px;
 
                 a {
-                    color: white;
+                    color: $off-white;
                     font-size: 13px;
                     font-weight: 300;
 
@@ -568,7 +581,7 @@ footer {
 
     .lower-section {
         background-color: #365FBA;
-        color: white;
+        color: $off-white;
         font-size: 10px;
         display: flex;
         flex-wrap: wrap;
@@ -584,7 +597,7 @@ footer {
                 margin-bottom: 10px;
 
                 a {
-                    color: white;
+                    color: $off-white;
 
                     &:hover {
                         text-decoration: underline;
@@ -601,7 +614,7 @@ footer {
                 margin-bottom: 2px;
                 
                 a {
-                    color: white;
+                    color: $off-white;
 
                     &:hover {
                         text-decoration: underline;
@@ -615,7 +628,7 @@ footer {
         }
 
         .button {
-            border: 1px white solid;
+            border: 1px $off-white solid;
             width: 150px;
             height: 35px;
 
@@ -707,8 +720,8 @@ footer {
     
                     &.main-cta {
                         background-color: transparent;
-                        color: white;
-                        border: 1px white solid;
+                        color: $off-white;
+                        border: 1px $off-white solid;
                     }
                 }
             }
@@ -722,7 +735,7 @@ footer {
             position: relative;
             text-align: left;
             background-color: rgba($main-color, $alpha: 0.03);
-            color: black;
+            color: $off-black;
             width: 50%;
             margin-top: 0px;
             padding-top: 120px;
@@ -733,7 +746,7 @@ footer {
     
             a {
                 margin-top: 100px;
-                color: white;
+                color: $off-white;
                 background-color: $main-color;
             }
 
