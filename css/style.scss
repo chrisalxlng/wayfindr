@@ -17,12 +17,6 @@ body {
     background-color: $off-white;
 }
 
-input[type=text] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
 *:focus {
     outline: none;
 }
@@ -341,7 +335,7 @@ nav {
             min-width: 60vw;
             margin-right: 30px;
             margin-top: 15px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
 
             &.spotlight {
                 border: 3px $main-color solid;
@@ -515,6 +509,7 @@ nav {
                     height: 35px;
                     padding: 10px;
                     background-color: $off-white;
+                    background-clip: padding-box;
 
                     &:focus {
                         border: 2px $main-color solid;

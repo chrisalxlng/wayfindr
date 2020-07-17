@@ -12,12 +12,6 @@ body {
   background-color: #f8f8f8;
 }
 
-input[type=text] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
 *:focus {
   outline: none;
 }
@@ -382,7 +376,7 @@ nav .nav-ul li .nav-link.main-cta {
   min-width: 60vw;
   margin-right: 30px;
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 #pricing-section .pricing-cards-container .pricing-card.spotlight {
@@ -610,6 +604,7 @@ nav .nav-ul li .nav-link.main-cta {
   height: 35px;
   padding: 10px;
   background-color: #f8f8f8;
+  background-clip: padding-box;
 }
 
 #signup-section .signup-section-content form .input-submit-container .mail-input:focus {
