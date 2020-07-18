@@ -366,10 +366,11 @@ nav .nav-ul li .nav-link.main-cta {
   margin-top: 30px;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 #pricing-section .pricing-cards-container::-webkit-scrollbar {
-  width: 0 !important;
+  display: none;
 }
 
 #pricing-section .pricing-cards-container::before {
@@ -394,6 +395,7 @@ nav .nav-ul li .nav-link.main-cta {
   margin-right: 30px;
   margin-top: 15px;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 
 #pricing-section .pricing-cards-container .pricing-card.spotlight {
@@ -432,6 +434,7 @@ nav .nav-ul li .nav-link.main-cta {
   font-weight: 600;
   margin-top: 5px;
   font-family: Montserrat, sans-serif;
+  font-size: calc(12px + 0.5vw);
 }
 
 #pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-benefit-list {

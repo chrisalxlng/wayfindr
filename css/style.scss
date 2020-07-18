@@ -331,9 +331,10 @@ nav {
         margin-top: 30px;
         overflow: -moz-scrollbars-none;
         -ms-overflow-style: none;
+        scrollbar-width: none;
 
         &::-webkit-scrollbar { 
-            width: 0 !important 
+            display: none;
         }
 
         &::before {
@@ -354,6 +355,7 @@ nav {
             margin-right: 30px;
             margin-top: 15px;
             margin-bottom: 15px;
+            overflow: hidden;
 
             &.spotlight {
                 border: 3px $main-color solid;
@@ -384,6 +386,7 @@ nav {
                     font-weight: 600;
                     margin-top: 5px;
                     font-family: $main-font;
+                    font-size: calc(12px + 0.5vw)
                 }
 
                 .pricing-card-benefit-list {
