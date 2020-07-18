@@ -401,8 +401,6 @@ nav .nav-ul li .nav-link.main-cta {
 #pricing-section .pricing-cards-container .pricing-card.spotlight {
   border: 3px #416FD6 solid;
   background-color: #416FD6;
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
 }
 
 #pricing-section .pricing-cards-container .pricing-card .pricing-card-heading {
