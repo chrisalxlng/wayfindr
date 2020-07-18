@@ -392,7 +392,8 @@ nav .nav-ul li .nav-link.main-cta {
   border-radius: 10px;
   background-color: rgba(198, 198, 255, 0.5);
   min-width: 60vw;
-  margin-right: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
   margin-top: 15px;
   margin-bottom: 15px;
   overflow: hidden;
