@@ -354,6 +354,7 @@ nav .nav-ul li .nav-link.main-cta {
 #features-section .features-grid .features-grid-element .features-text-container p {
   margin-top: 10px;
   line-height: calc(15px + 0.5vw);
+  overflow: hidden;
 }
 
 #pricing-section .pricing-cards-container {
