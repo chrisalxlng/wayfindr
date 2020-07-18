@@ -1,20 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 
 $main-color: #416FD6;
 $secondary-color: #C6C6FF;
 $off-black: rgba($color: #000000, $alpha: 0.85);
 $off-white: #f8f8f8;
-$main-font: Montserrat, sant-serif;
+$main-font: Montserrat, sans-serif;
+$text-font: Mulish, sans-serif;
 
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: $main-font;
     overflow-x: hidden;
 }
 
 body {
     background-color: $off-white;
+    font-family: $main-font;
 }
 
 *:focus {
@@ -60,15 +62,20 @@ a {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: calc(25px + 0.5vw);
 }
 
 h2 {
-    font-size: 25px;
+    font-size: calc(20px + 0.5vw);
+}
+
+h3 {
+    font-size: calc(15px + 0.5vw);
 }
 
 p {
-    font-size: 15px;
+    font-size: calc(10px + 0.5vw);
+    font-family: $text-font;
 } 
 
 .button {
@@ -123,6 +130,7 @@ p {
 
     .section-watermark-heading {
         position: absolute;
+        font-family: $main-font;
         bottom: 0;
         left: 2px;
         font-size: 60px;
@@ -231,6 +239,7 @@ nav {
 
         p {
             margin-top: 20px;
+            font-size: calc(12px + 0.5vw);
         }
 
         img {
@@ -304,7 +313,7 @@ nav {
 
                 p {
                     margin-top: 10px;
-                    text-align: justify;
+                    line-height: calc(15px + 1vw);
                 }
             }
         }
@@ -357,12 +366,8 @@ nav {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-weight: 700;
                 color: $off-black;
                 
-                p {
-                    font-size: 18px;
-                }
 
                 &.spotlight {
                     color: $off-white;
@@ -377,8 +382,8 @@ nav {
                 .pricing-card-price {
                     text-align: center;
                     font-weight: 600;
-                    font-size: 15px;
                     margin-top: 5px;
+                    font-family: $main-font;
                 }
 
                 .pricing-card-benefit-list {
@@ -400,10 +405,6 @@ nav {
                             &.fa-times {
                                 color: #D32E2E;
                             }
-                        }
-
-                        p {
-                            font-size: 13px;
                         }
                     }
                 }
@@ -463,9 +464,8 @@ nav {
         margin-bottom: 30px;
         margin-top: 30px;
 
-        p {
+        h3 {
             opacity: 0;
-            font-size: 18px;
             font-weight: 500;
             color: $off-black;
 
@@ -553,6 +553,7 @@ nav {
 
 footer {
     background-color: $main-color;
+    font-family: $main-font;
 
     .upper-section {
         display: flex;
@@ -564,6 +565,7 @@ footer {
             color: $off-white;
             font-weight: 500;
             font-size: 16px;
+            font-family: $main-font;
         }
 
         .footer-list-container {
@@ -573,7 +575,7 @@ footer {
 
                 a {
                     color: $off-white;
-                    font-size: 13px;
+                    font-size: 12px;
                     font-weight: 300;
 
                     &:hover {
@@ -654,6 +656,7 @@ footer {
     
             .copyright {
                 font-size: 10px;
+                font-family: $main-font;
             }
         }
 
@@ -669,6 +672,7 @@ footer {
 
             p {
                 font-size: 10px;
+                font-family: $main-font;
             }
         }
     }
@@ -812,15 +816,15 @@ footer {
     $pricing-card-margin-x: 20px;
 
     h1 {
-        font-size: 40px;
+        //font-size: 40px;
     }
     
     h2 {
-        font-size: 30px;
+        //font-size: 30px;
     }
     
     p {
-        font-size: 15px;
+        //font-size: 15px;
     } 
 
     .section-padding {

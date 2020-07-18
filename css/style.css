@@ -1,15 +1,16 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 * {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Montserrat, sant-serif;
   overflow-x: hidden;
 }
 
 body {
   background-color: #f8f8f8;
+  font-family: Montserrat, sans-serif;
 }
 
 *:focus {
@@ -65,15 +66,20 @@ a {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: calc(25px + 0.5vw);
 }
 
 h2 {
-  font-size: 25px;
+  font-size: calc(20px + 0.5vw);
+}
+
+h3 {
+  font-size: calc(15px + 0.5vw);
 }
 
 p {
-  font-size: 15px;
+  font-size: calc(10px + 0.5vw);
+  font-family: Mulish, sans-serif;
 }
 
 .button {
@@ -141,6 +147,7 @@ p {
 
 .section-header .section-watermark-heading {
   position: absolute;
+  font-family: Montserrat, sans-serif;
   bottom: 0;
   left: 2px;
   font-size: 60px;
@@ -274,6 +281,7 @@ nav .nav-ul li .nav-link.main-cta {
 
 #hero-section .left-column p {
   margin-top: 20px;
+  font-size: calc(12px + 0.5vw);
 }
 
 #hero-section .left-column img {
@@ -344,7 +352,7 @@ nav .nav-ul li .nav-link.main-cta {
 
 #features-section .features-grid .features-grid-element .features-text-container p {
   margin-top: 10px;
-  text-align: justify;
+  line-height: calc(15px + 1vw);
 }
 
 #pricing-section .pricing-cards-container {
@@ -406,12 +414,7 @@ nav .nav-ul li .nav-link.main-cta {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: 700;
   color: rgba(0, 0, 0, 0.85);
-}
-
-#pricing-section .pricing-cards-container .pricing-card .pricing-card-heading p {
-  font-size: 18px;
 }
 
 #pricing-section .pricing-cards-container .pricing-card .pricing-card-heading.spotlight {
@@ -427,8 +430,8 @@ nav .nav-ul li .nav-link.main-cta {
 #pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-price {
   text-align: center;
   font-weight: 600;
-  font-size: 15px;
   margin-top: 5px;
+  font-family: Montserrat, sans-serif;
 }
 
 #pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-benefit-list {
@@ -456,10 +459,6 @@ nav .nav-ul li .nav-link.main-cta {
 
 #pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-benefit-list li i.fa-times {
   color: #D32E2E;
-}
-
-#pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-benefit-list li p {
-  font-size: 13px;
 }
 
 #pricing-section .dot-con-wrapper {
@@ -541,14 +540,13 @@ nav .nav-ul li .nav-link.main-cta {
   margin-top: 30px;
 }
 
-#signup-section .signup-section-content p {
+#signup-section .signup-section-content h3 {
   opacity: 0;
-  font-size: 18px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.85);
 }
 
-#signup-section .signup-section-content p .span {
+#signup-section .signup-section-content h3 .span {
   color: #416FD6;
 }
 
@@ -646,6 +644,7 @@ nav .nav-ul li .nav-link.main-cta {
 
 footer {
   background-color: #416FD6;
+  font-family: Montserrat, sans-serif;
 }
 
 footer .upper-section {
@@ -662,6 +661,7 @@ footer .upper-section .footer-section-heading {
   color: #f8f8f8;
   font-weight: 500;
   font-size: 16px;
+  font-family: Montserrat, sans-serif;
 }
 
 footer .upper-section .footer-list-container li {
@@ -670,7 +670,7 @@ footer .upper-section .footer-list-container li {
 
 footer .upper-section .footer-list-container li a {
   color: #f8f8f8;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 300;
 }
 
@@ -756,6 +756,7 @@ footer .lower-section .links-copyright-container .icons-copyright a:hover {
 
 footer .lower-section .links-copyright-container .copyright {
   font-size: 10px;
+  font-family: Montserrat, sans-serif;
 }
 
 footer .lower-section .button {
@@ -771,6 +772,7 @@ footer .lower-section .button img {
 
 footer .lower-section .button p {
   font-size: 10px;
+  font-family: Montserrat, sans-serif;
 }
 
 @media (min-width: 450px) {
@@ -881,15 +883,6 @@ footer .lower-section .button p {
 }
 
 @media (min-width: 900px) {
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    font-size: 30px;
-  }
-  p {
-    font-size: 15px;
-  }
   .section-padding {
     padding: calc(60px + 20px) 50px;
   }

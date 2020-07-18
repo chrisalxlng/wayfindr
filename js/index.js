@@ -453,7 +453,7 @@ function animateSignupSection() {
             });
         
             timeline.add({
-                targets: ".signup-section-content p",
+                targets: ".signup-section-content h3",
                 scale: [0.95, 1],
                 opacity: [0, 1],
             })
