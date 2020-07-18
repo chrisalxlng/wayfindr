@@ -1,6 +1,6 @@
 # wayfindr
 
-small landing page for a fictional company; focus on button design, multi-language-support, smooth animations; HTML/SCSS/JavaScript/Anime.js
+small landing page for a fictional company; focus on button design, multi-language-support, smooth animations; mail verification from a UX perspective; HTML/SCSS/JavaScript/Anime.js
 
 See my project on GitHub Pages: https://chrisalxlng.github.io/wayfindr/   
       
