@@ -28,6 +28,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 60px #fafafa inset !important;
+    box-shadow: 0 0 0 60px #fafafa inset !important;;
     background-color: #fafafa !important;
     background-clip: content-box !important;
 }
@@ -227,6 +228,7 @@ nav {
 }
 
 #hero-section {
+
     .left-column {
         display: flex;
         flex-direction: column;
@@ -265,6 +267,7 @@ nav {
 }
 
 #features-section {
+
     .features-grid {
 
         .features-grid-element {
@@ -313,7 +316,7 @@ nav {
 
                 p {
                     margin-top: 10px;
-                    line-height: calc(15px + 1vw);
+                    line-height: calc(15px + 0.5vw);
                 }
             }
         }
@@ -360,7 +363,6 @@ nav {
             &.spotlight {
                 border: 3px $main-color solid;
                 background-color: $main-color;
-                //transform: scale(1.01);
             }
 
             .pricing-card-heading {
@@ -386,7 +388,7 @@ nav {
                     font-weight: 600;
                     margin-top: 5px;
                     font-family: $main-font;
-                    font-size: calc(12px + 0.5vw)
+                    font-size: calc(12px + 0.5vw);
                 }
 
                 .pricing-card-benefit-list {
@@ -818,18 +820,6 @@ footer {
     $padding-y: 60px;
     $pricing-card-margin-x: 20px;
 
-    h1 {
-        //font-size: 40px;
-    }
-    
-    h2 {
-        //font-size: 30px;
-    }
-    
-    p {
-        //font-size: 15px;
-    } 
-
     .section-padding {
         padding: calc(#{$padding-y} + 20px) $padding-x;
     }
@@ -972,6 +962,7 @@ footer {
     }
 
     #features-section {
+
         .features-grid {
     
             .features-grid-element {
@@ -1101,6 +1092,7 @@ footer {
     }
 
     #features-section {
+
         .features-grid {
     
             .features-grid-element {
@@ -1130,6 +1122,15 @@ footer {
     $padding-x: 150px;
     $padding-y: 80px;
     $pricing-card-margin-x: 20px;
+    
+    h3 {
+        font-size: calc(11px + 0.5vw);
+    }
+
+    p {
+        font-size: calc(10px + 0.3vw);
+        font-family: $text-font;
+    } 
 
     .section-padding {
         padding: calc(#{$padding-y} + 20px) $padding-x;
@@ -1195,12 +1196,19 @@ footer {
             .pricing-card {
                 margin-right: $pricing-card-margin-x;
                 margin-left: $pricing-card-margin-x;
+
+                .pricing-card-content {
+
+                    .pricing-card-price {
+                        font-size: calc(12px + 0.3vw);
+                    }
+                }
             }
         }
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1700px) {
     $padding-x: 200px;
     $padding-y: 110px;
     $pricing-card-margin-x: 60px;
@@ -1228,6 +1236,13 @@ footer {
     
         .section-watermark-heading {
             left: calc(#{$padding-x} - 40px);
+        }
+    }
+
+    #hero-section {
+
+        .left-column {
+            margin-top: 40px;
         }
     }
 
