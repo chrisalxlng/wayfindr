@@ -1085,6 +1085,9 @@ footer .lower-section .button p {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
+  #pricing-section .pricing-cards-container .pricing-card .pricing-card-content .pricing-card-benefit-list p {
+    font-size: calc(11px + 0.3vw);
+  }
   #pricing-section .dot-con-wrapper {
     display: none;
   }
